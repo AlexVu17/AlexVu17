@@ -17,15 +17,15 @@ const LEAD = 6;               // steps entering from the left
 const THEMES = {
   dark: {
     file: "dragon-dark.svg",
-    bg: "#0b0b1a",
-    empty: "#161b22",
-    levels: ["#0e3a4a", "#00788a", "#00b8d4", "#00f0ff"],
-    body: ["#ff2bd6", "#9d4dff"],     // head → tail gradient
-    belly: "#ffd1f5",
-    horn: "#f5f5ff",
-    eye: "#00f0ff",
-    fire: ["#fff3a3", "#ff9a3c", "#ff2bd6"],
-    text: "#8b949e",
+    bg: "#020a04",
+    empty: "#0c1f12",
+    levels: ["#0f5323", "#13852f", "#1fc24a", "#00ff41"],
+    body: ["#39ff6a", "#0b6e2a"],     // head → tail gradient
+    belly: "#c8ffd4",
+    horn: "#e6ffe9",
+    eye: "#ff0040",
+    fire: ["#eaffea", "#00ff41", "#0b6e2a"],
+    text: "#6b8f73",
   },
   light: {
     file: "dragon.svg",
