@@ -52,8 +52,6 @@
 
 </div>
 
-## 🐉 Dragon vs. Contributions
-
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AlexVu17/AlexVu17/output/dragon-dark.svg" />
