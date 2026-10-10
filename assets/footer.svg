@@ -1,6 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 70" width="1000" height="70">
-<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace;font-size:15px}.cur{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}</style>
-<path d="M0 1 H1000" stroke="#00ff41" stroke-opacity=".4" stroke-dasharray="6 6"/>
-<text x="500" y="32" text-anchor="middle"><tspan fill="#00ff41">root@alexvu</tspan><tspan fill="#6b8f73">:~# </tspan><tspan fill="#c8ffd4">logout</tspan></text>
-<text x="500" y="56" text-anchor="middle" fill="#6b8f73" font-size="13">[ connection to alexvu closed. thanks for visiting ] <tspan class="cur" fill="#00ff41">█</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 80" width="1000" height="80">
+<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#0a0a0c"/><rect width="4" height="4" fill="#131317"/><rect x="4" y="4" width="4" height="4" fill="#131317"/></pattern>
+<pattern id="hazard" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="24" height="24" fill="#111"/><rect width="12" height="24" fill="#f5c400"/></pattern>
+<filter id="glowR" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3a8"/><stop offset=".45" stop-color="#f5c400"/><stop offset="1" stop-color="#b37d00"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.2s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
+.sweep{animation:sw 3.8s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}60%,100%{transform:translateX(1100px) skewX(-20deg)}}
+.scan{animation:sc 5s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
+.glitch{animation:gl 5s steps(1) infinite}@keyframes gl{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(-8px,0)}93%{transform:translate(6px,0)}95%{transform:translate(0,0)}}
+.spin{transform-origin:150px 200px;animation:spin 10s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.spinR{transform-origin:150px 200px;animation:spin 16s linear infinite reverse}
+.pulse{animation:pu 2s ease-in-out infinite alternate}@keyframes pu{from{opacity:.55}to{opacity:1}}</style>
+<rect x="0" y="0" width="1000" height="12" fill="url(#hazard)"/>
+<path d="M300 30 H700 L684 62 H316Z" fill="#ff2a2a"/>
+<text x="500" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#0a0a0c" letter-spacing="4">END OF TRANSMISSION <tspan class="blink">▮</tspan></text>
 </svg>

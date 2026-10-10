@@ -1,33 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380">
-<defs>
-<filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".3"/></pattern>
-</defs>
-<style>
-text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace;font-size:16px}
-.cur{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
-.px{animation:px 4s steps(1) infinite}@keyframes px{0%,100%{opacity:1}60%{opacity:.6}61%{opacity:1}}
-</style>
-<rect x=".5" y=".5" width="999" height="379" rx="10" fill="#020a04" stroke="#00ff41" stroke-opacity=".55"/>
-<rect x=".5" y=".5" width="999" height="34" rx="10" fill="#06170b"/>
-<path d="M1 34 H999" stroke="#00ff41" stroke-opacity=".35"/>
-<text x="20" y="23" font-size="13" fill="#00ff41">[■]</text>
-<text x="500" y="23" text-anchor="middle" font-size="13" fill="#6b8f73">root@alexvu: ~ — bash — 120×32</text>
-<text x="980" y="23" text-anchor="end" font-size="13" fill="#00ff41">● LIVE</text>
-<g class="px" fill="#00ff41" filter="url(#glow)"><rect x="82" y="120" width="10" height="10"/><rect x="94" y="120" width="10" height="10"/><rect x="106" y="120" width="10" height="10"/><rect x="70" y="132" width="10" height="10"/><rect x="118" y="132" width="10" height="10"/><rect x="70" y="144" width="10" height="10"/><rect x="118" y="144" width="10" height="10"/><rect x="70" y="156" width="10" height="10"/><rect x="82" y="156" width="10" height="10"/><rect x="94" y="156" width="10" height="10"/><rect x="106" y="156" width="10" height="10"/><rect x="118" y="156" width="10" height="10"/><rect x="70" y="168" width="10" height="10"/><rect x="118" y="168" width="10" height="10"/><rect x="70" y="180" width="10" height="10"/><rect x="118" y="180" width="10" height="10"/><rect x="70" y="192" width="10" height="10"/><rect x="118" y="192" width="10" height="10"/><rect x="142" y="120" width="10" height="10"/><rect x="190" y="120" width="10" height="10"/><rect x="142" y="132" width="10" height="10"/><rect x="190" y="132" width="10" height="10"/><rect x="142" y="144" width="10" height="10"/><rect x="190" y="144" width="10" height="10"/><rect x="142" y="156" width="10" height="10"/><rect x="190" y="156" width="10" height="10"/><rect x="154" y="168" width="10" height="10"/><rect x="178" y="168" width="10" height="10"/><rect x="154" y="180" width="10" height="10"/><rect x="178" y="180" width="10" height="10"/><rect x="166" y="192" width="10" height="10"/></g>
-<text x="70" y="240" font-size="13" fill="#6b8f73">uid=1337(alexvu)</text>
-<text x="70" y="260" font-size="13" fill="#6b8f73">gid=0(root)</text>
-<text x="70" y="280" font-size="13" fill="#6b8f73">shell=/bin/coffee</text>
-<text x="330" y="74"><tspan fill="#00ff41">root@alexvu</tspan><tspan fill="#6b8f73">:~# </tspan><tspan fill="#c8ffd4">cat ./profile.cfg</tspan></text>
-<path d="M330 94 H690" stroke="#00ff41" stroke-opacity=".35" stroke-dasharray="4 4"/>
-<text x="330" y="128"><tspan fill="#00ff41">role</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">web developer</tspan></text>
-<text x="330" y="152"><tspan fill="#00ff41">location</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">viet nam</tspan></text>
-<text x="330" y="176"><tspan fill="#00ff41">backend</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">php · laravel · node.js</tspan></text>
-<text x="330" y="200"><tspan fill="#00ff41">frontend</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">javascript · html · css · tailwind</tspan></text>
-<text x="330" y="224"><tspan fill="#00ff41">database</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">mysql</tspan></text>
-<text x="330" y="248"><tspan fill="#00ff41">tools</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">git · vscode · postman · linux</tspan></text>
-<text x="330" y="272"><tspan fill="#00ff41">fuel</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">coffee + lo-fi</tspan></text>
-<text x="330" y="296"><tspan fill="#00ff41">motto</tspan><tspan x="450" fill="#6b8f73">:</tspan><tspan x="470" fill="#c8ffd4">"make it work, make it clean"</tspan></text>
-<text x="330" y="334"><tspan fill="#00ff41">root@alexvu</tspan><tspan fill="#6b8f73">:~# </tspan><tspan class="cur" fill="#00ff41">█</tspan></text>
-<rect width="1000" height="380" rx="10" fill="url(#scan)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400">
+<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#0a0a0c"/><rect width="4" height="4" fill="#131317"/><rect x="4" y="4" width="4" height="4" fill="#131317"/></pattern>
+<pattern id="hazard" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="24" height="24" fill="#111"/><rect width="12" height="24" fill="#f5c400"/></pattern>
+<filter id="glowR" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3a8"/><stop offset=".45" stop-color="#f5c400"/><stop offset="1" stop-color="#b37d00"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="frame"><path d="M0 0 H970 L1000 30 V400 H30 L0 370Z"/></clipPath></defs>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.2s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
+.sweep{animation:sw 3.8s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}60%,100%{transform:translateX(1100px) skewX(-20deg)}}
+.scan{animation:sc 5s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
+.glitch{animation:gl 5s steps(1) infinite}@keyframes gl{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(-8px,0)}93%{transform:translate(6px,0)}95%{transform:translate(0,0)}}
+.spin{transform-origin:150px 200px;animation:spin 10s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.spinR{transform-origin:150px 200px;animation:spin 16s linear infinite reverse}
+.pulse{animation:pu 2s ease-in-out infinite alternate}@keyframes pu{from{opacity:.55}to{opacity:1}}</style>
+<g clip-path="url(#frame)">
+<rect width="1000" height="400" fill="url(#carbon)"/>
+<path d="M0 0 H560 L530 44 H0Z" fill="#ff2a2a"/>
+<text x="24" y="29" font-size="15" font-weight="700" fill="#0a0a0c" letter-spacing="3">// DOSSIER — SUBJECT: ALEX VU</text>
+<text x="970" y="29" text-anchor="end" font-size="12" fill="#8a7d55" letter-spacing="2">FILE 0x1337 · CLEARANCE <tspan fill="#f5c400">ALPHA</tspan></text>
+<!-- emblem -->
+<g class="pulse">
+<circle class="spin" cx="150" cy="200" r="96" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-dasharray="40 14 6 14"/>
+<circle class="spinR" cx="150" cy="200" r="110" fill="none" stroke="#f5c400" stroke-width="1.5" stroke-dasharray="2 8"/>
+</g>
+<polygon points="150,118 222,160 222,240 150,282 78,240 78,160" fill="#0d0d10" stroke="#f5c400" stroke-width="2.5"/>
+<polygon points="150,132 210,167 210,233 150,268 90,233 90,167" fill="none" stroke="#ff2a2a" stroke-opacity=".6"/>
+<text x="150" y="224" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="64" fill="url(#gold)" stroke="#3a2a00">AV</text>
+<text x="150" y="340" text-anchor="middle" font-size="12" fill="#8a7d55" letter-spacing="3">CODENAME</text>
+<text x="150" y="360" text-anchor="middle" font-size="16" font-weight="700" fill="#f5c400" letter-spacing="4">ALEXVU</text>
+<path d="M320 88 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="92" width="4" height="14" fill="#ff2a2a"/><text x="334" y="104" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">ROLE</text><text x="470" y="104" font-size="15" fill="#ece8dc">Fullstack Web Developer</text>
+<path d="M320 116 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="120" width="4" height="14" fill="#ff2a2a"/><text x="334" y="132" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">BASE</text><text x="470" y="132" font-size="15" fill="#ece8dc">Ha Noi, Viet Nam</text>
+<path d="M320 144 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="148" width="4" height="14" fill="#ff2a2a"/><text x="334" y="160" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">COMPANY</text><text x="470" y="160" font-size="15" fill="#ece8dc">Protean Studios</text>
+<path d="M320 172 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="176" width="4" height="14" fill="#ff2a2a"/><text x="334" y="188" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">BACKEND</text><text x="470" y="188" font-size="15" fill="#ece8dc">PHP · Laravel · Node.js</text>
+<path d="M320 200 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="204" width="4" height="14" fill="#ff2a2a"/><text x="334" y="216" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">FRONTEND</text><text x="470" y="216" font-size="15" fill="#ece8dc">JavaScript · HTML · CSS · Tailwind</text>
+<path d="M320 228 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="232" width="4" height="14" fill="#ff2a2a"/><text x="334" y="244" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">DATABASE</text><text x="470" y="244" font-size="15" fill="#ece8dc">MySQL</text>
+<path d="M320 256 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="260" width="4" height="14" fill="#ff2a2a"/><text x="334" y="272" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">SERVER</text><text x="470" y="272" font-size="15" fill="#ece8dc">Linux</text>
+<path d="M320 284 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="288" width="4" height="14" fill="#ff2a2a"/><text x="334" y="300" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">TOOLS</text><text x="470" y="300" font-size="15" fill="#ece8dc">Git · GitHub · VS Code · Postman</text>
+<path d="M320 312 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="316" width="4" height="14" fill="#ff2a2a"/><text x="334" y="328" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">MOTTO</text><text x="470" y="328" font-size="15" fill="#ece8dc">Make it work. Make it clean.</text>
+
+<rect x="0" y="384" width="1000" height="16" fill="url(#hazard)"/>
+</g>
+<path d="M1 1 H970 L999 30 V399 H30 L1 370Z" fill="none" stroke="#ff2a2a" stroke-opacity=".7" stroke-width="2"/>
 </svg>
