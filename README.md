@@ -47,8 +47,8 @@
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ThaoVuDEV&show_icons=true&include_all_commits=true&bg_color=0a0a0c&title_color=c9d1d9&icon_color=c8102e&text_color=d7dce2&ring_color=c8102e&border_color=3a1218&border_radius=4" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThaoVuDEV&layout=compact&langs_count=6&bg_color=0a0a0c&title_color=c9d1d9&text_color=d7dce2&border_color=3a1218&border_radius=4" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=AlexVu17&show_icons=true&include_all_commits=true&bg_color=0a0a0c&title_color=c9d1d9&icon_color=c8102e&text_color=d7dce2&ring_color=c8102e&border_color=3a1218&border_radius=4" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlexVu17&layout=compact&langs_count=6&bg_color=0a0a0c&title_color=c9d1d9&text_color=d7dce2&border_color=3a1218&border_radius=4" />
 
 </div>
 
@@ -56,9 +56,9 @@
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ThaoVuDEV/ThaoVuDEV/output/dragon-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ThaoVuDEV/ThaoVuDEV/output/dragon.svg" />
-  <img alt="dragon eating contributions" src="https://raw.githubusercontent.com/ThaoVuDEV/ThaoVuDEV/output/dragon-dark.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AlexVu17/AlexVu17/output/dragon-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AlexVu17/AlexVu17/output/dragon.svg" />
+  <img alt="dragon eating contributions" src="https://raw.githubusercontent.com/AlexVu17/AlexVu17/output/dragon-dark.svg" width="100%" />
 </picture>
 </div>
 
@@ -69,7 +69,7 @@
 <a href="https://proteanstudios.com"><img src="https://img.shields.io/badge/PROTEAN_STUDIOS-c8102e?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 <a href="https://avlab.vn"><img src="https://img.shields.io/badge/AVLAB.VN-c9d1d9?style=for-the-badge&logo=googlechrome&logoColor=0a0a0c" /></a>
 <a href="https://www.facebook.com/thaovu.17"><img src="https://img.shields.io/badge/FACEBOOK-1877f2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
-<a href="https://github.com/ThaoVuDEV"><img src="https://img.shields.io/badge/GITHUB-0a0a0c?style=for-the-badge&logo=github&logoColor=c9d1d9" /></a>
+<a href="https://github.com/AlexVu17"><img src="https://img.shields.io/badge/GITHUB-0a0a0c?style=for-the-badge&logo=github&logoColor=c9d1d9" /></a>
 
 </div>
 
