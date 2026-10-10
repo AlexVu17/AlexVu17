@@ -2,37 +2,36 @@
 
 <img src="./assets/hero.svg" width="100%" alt="ALEX VU" />
 
-<br/>
+<br/><br/>
 
-<img src="https://img.shields.io/badge/WEB_DEVELOPER-00F0FF?style=for-the-badge&logoColor=000&labelColor=000" />
-<img src="https://img.shields.io/badge/LARAVEL_+_JS-FF2E88?style=for-the-badge" />
-<img src="https://img.shields.io/badge/VIET_NAM_🇻🇳-9D4DFF?style=for-the-badge" />
-<img src="https://img.shields.io/badge/OPEN_TO_COLLAB-2EE6A6?style=for-the-badge" />
+<img src="https://img.shields.io/badge/root-web__developer-00ff41?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/stack-laravel_·_js-00ff41?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/status-online-00ff41?style=flat-square&labelColor=0d1117" />
 
 </div>
 
 <br/>
 
-<img src="./assets/about.svg" width="100%" alt="neofetch" />
+<img src="./assets/about.svg" width="100%" alt="profile.cfg" />
 
-## ⚡ Tech Stack
+### `root@alexvu:~# ls ./stack`
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=php,laravel,nodejs,mysql,js,html,css,bootstrap,tailwind,git,github,vscode,postman,linux&perline=7" />
+<img src="https://skillicons.dev/icons?i=php,laravel,nodejs,mysql,js,html,css,bootstrap,tailwind,git,github,vscode,postman,linux&theme=dark&perline=7" />
 
 </div>
 
-## 📊 Stats
+### `root@alexvu:~# git log --stats`
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ThaoVuDEV&show_icons=true&include_all_commits=true&bg_color=30,160a33,2a0b3d&title_color=ff4fd8&icon_color=00f0ff&text_color=f2ecff&ring_color=00f0ff&border_color=9d4dff&border_radius=14" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThaoVuDEV&layout=donut&langs_count=6&bg_color=30,160a33,2a0b3d&title_color=ff4fd8&text_color=f2ecff&border_color=9d4dff&border_radius=14" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=ThaoVuDEV&show_icons=true&include_all_commits=true&bg_color=020a04&title_color=00ff41&icon_color=00ff41&text_color=c8ffd4&ring_color=00ff41&border_color=0f5323&border_radius=10" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThaoVuDEV&layout=compact&langs_count=6&bg_color=020a04&title_color=00ff41&text_color=c8ffd4&border_color=0f5323&border_radius=10" />
 
 </div>
 
-## 🐉 Dragon vs. Contributions
+### `root@alexvu:~# ./dragon --eat contributions`
 
 <div align="center">
 <picture>
@@ -42,17 +41,17 @@
 </picture>
 </div>
 
-## 📡 Connect
+### `root@alexvu:~# ping alexvu`
 
 <div align="center">
 
-<a href="https://www.facebook.com/thaovu.17"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
-<a href="https://github.com/ThaoVuDEV"><img src="https://img.shields.io/badge/GitHub-9D4DFF?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://www.facebook.com/thaovu.17"><img src="https://img.shields.io/badge/facebook-0d1117?style=flat-square&logo=facebook&logoColor=00ff41" /></a>
+<a href="https://github.com/ThaoVuDEV"><img src="https://img.shields.io/badge/github-0d1117?style=flat-square&logo=github&logoColor=00ff41" /></a>
 <!-- Điền link thật rồi bỏ comment:
-<a href="https://linkedin.com/in/YOUR-ID"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:YOUR@EMAIL.COM"><img src="https://img.shields.io/badge/Email-FF2E88?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://linkedin.com/in/YOUR-ID"><img src="https://img.shields.io/badge/linkedin-0d1117?style=flat-square&logo=linkedin&logoColor=00ff41" /></a>
+<a href="mailto:YOUR@EMAIL.COM"><img src="https://img.shields.io/badge/email-0d1117?style=flat-square&logo=gmail&logoColor=00ff41" /></a>
 -->
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:9d4dff,50:ff2e88,100:00f0ff&height=120&section=footer&text=thanks%20for%20visiting%20✦&fontSize=22&fontColor=ffffff&fontAlignY=72" width="100%" />
+<img src="./assets/footer.svg" width="100%" alt="logout" />
