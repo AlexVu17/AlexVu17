@@ -1,42 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400">
-<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#0a0a0c"/><rect width="4" height="4" fill="#131317"/><rect x="4" y="4" width="4" height="4" fill="#131317"/></pattern>
-<pattern id="hazard" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="24" height="24" fill="#111"/><rect width="12" height="24" fill="#f5c400"/></pattern>
+<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#07080b"/><rect width="4" height="4" fill="#0d0f13"/><rect x="4" y="4" width="4" height="4" fill="#0d0f13"/></pattern>
+<pattern id="hazard" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="20" height="20" fill="#0b0c0f"/><rect width="7" height="20" fill="#c8102e" opacity=".85"/></pattern>
 <filter id="glowR" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3a8"/><stop offset=".45" stop-color="#f5c400"/><stop offset="1" stop-color="#b37d00"/></linearGradient>
-<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="frame"><path d="M0 0 H970 L1000 30 V400 H30 L0 370Z"/></clipPath></defs>
-<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.2s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
-.sweep{animation:sw 3.8s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}60%,100%{transform:translateX(1100px) skewX(-20deg)}}
-.scan{animation:sc 5s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
-.glitch{animation:gl 5s steps(1) infinite}@keyframes gl{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(-8px,0)}93%{transform:translate(6px,0)}95%{transform:translate(0,0)}}
-.spin{transform-origin:150px 200px;animation:spin 10s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-.spinR{transform-origin:150px 200px;animation:spin 16s linear infinite reverse}
-.pulse{animation:pu 2s ease-in-out infinite alternate}@keyframes pu{from{opacity:.55}to{opacity:1}}</style>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".48" stop-color="#c3cad3"/><stop offset=".52" stop-color="#7d8792"/><stop offset="1" stop-color="#d7dde4"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="frame"><path d="M0 0 H970 L1000 30 V400 H30 L0 370Z"/></clipPath>
+<linearGradient id="hoodG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1f26"/><stop offset="1" stop-color="#0b0d11"/></linearGradient>
+<radialGradient id="faceG" cx=".5" cy="1" r=".9"><stop offset="0" stop-color="#8fd3ff" stop-opacity=".35"/><stop offset="1" stop-color="#8fd3ff" stop-opacity="0"/></radialGradient>
+</defs>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.4s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
+.sweep{animation:sw 4.5s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}55%,100%{transform:translateX(1100px) skewX(-20deg)}}
+.scan{animation:sc 6s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
+.glitch{animation:gl 6s steps(1) infinite}@keyframes gl{0%,92%,100%{transform:translate(0,0)}93%{transform:translate(-7px,0)}95%{transform:translate(5px,0)}97%{transform:translate(0,0)}}
+.ghA{animation:ga 2.6s steps(1) infinite}@keyframes ga{0%,100%{transform:translate(-4px,0)}30%{transform:translate(-6px,1px)}60%{transform:translate(-3px,-1px)}85%{transform:translate(-10px,0)}}
+.ghB{animation:gb 2.6s steps(1) infinite}@keyframes gb{0%,100%{transform:translate(4px,0)}30%{transform:translate(6px,-1px)}60%{transform:translate(3px,1px)}85%{transform:translate(10px,0)}}
+.ghC{animation:gc 3.4s steps(1) infinite}@keyframes gc{0%,100%{transform:translate(0,2px)}50%{transform:translate(1px,-2px)}}
+.handL{animation:ty .28s ease-in-out infinite alternate}.handR{animation:ty .28s ease-in-out infinite alternate-reverse}@keyframes ty{from{transform:translateY(0)}to{transform:translateY(-4px)}}
+.faceGlow{animation:fg 1.8s steps(3) infinite}@keyframes fg{0%{opacity:.6}33%{opacity:1}66%{opacity:.75}}
+.eyes{animation:ey 5s steps(1) infinite}@keyframes ey{0%,94%,100%{opacity:1}95%,97%{opacity:0}}
+.slice{animation:sl 4s steps(1) infinite}@keyframes sl{0%,86%,100%{opacity:0;transform:none}87%{opacity:.55;transform:translateX(-12px)}89%{opacity:.4;transform:translateX(10px)}91%{opacity:0}}
+.slice2{animation:sl 4s steps(1) infinite;animation-delay:-1.3s}
+</style>
 <g clip-path="url(#frame)">
 <rect width="1000" height="400" fill="url(#carbon)"/>
-<path d="M0 0 H560 L530 44 H0Z" fill="#ff2a2a"/>
-<text x="24" y="29" font-size="15" font-weight="700" fill="#0a0a0c" letter-spacing="3">// DOSSIER — SUBJECT: ALEX VU</text>
-<text x="970" y="29" text-anchor="end" font-size="12" fill="#8a7d55" letter-spacing="2">FILE 0x1337 · CLEARANCE <tspan fill="#f5c400">ALPHA</tspan></text>
-<!-- emblem -->
-<g class="pulse">
-<circle class="spin" cx="150" cy="200" r="96" fill="none" stroke="#ff2a2a" stroke-width="3" stroke-dasharray="40 14 6 14"/>
-<circle class="spinR" cx="150" cy="200" r="110" fill="none" stroke="#f5c400" stroke-width="1.5" stroke-dasharray="2 8"/>
-</g>
-<polygon points="150,118 222,160 222,240 150,282 78,240 78,160" fill="#0d0d10" stroke="#f5c400" stroke-width="2.5"/>
-<polygon points="150,132 210,167 210,233 150,268 90,233 90,167" fill="none" stroke="#ff2a2a" stroke-opacity=".6"/>
-<text x="150" y="224" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="64" fill="url(#gold)" stroke="#3a2a00">AV</text>
-<text x="150" y="340" text-anchor="middle" font-size="12" fill="#8a7d55" letter-spacing="3">CODENAME</text>
-<text x="150" y="360" text-anchor="middle" font-size="16" font-weight="700" fill="#f5c400" letter-spacing="4">ALEXVU</text>
-<path d="M320 88 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="92" width="4" height="14" fill="#ff2a2a"/><text x="334" y="104" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">ROLE</text><text x="470" y="104" font-size="15" fill="#ece8dc">Fullstack Web Developer</text>
-<path d="M320 116 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="120" width="4" height="14" fill="#ff2a2a"/><text x="334" y="132" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">BASE</text><text x="470" y="132" font-size="15" fill="#ece8dc">Ha Noi, Viet Nam</text>
-<path d="M320 144 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="148" width="4" height="14" fill="#ff2a2a"/><text x="334" y="160" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">COMPANY</text><text x="470" y="160" font-size="15" fill="#ece8dc">Protean Studios</text>
-<path d="M320 172 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="176" width="4" height="14" fill="#ff2a2a"/><text x="334" y="188" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">BACKEND</text><text x="470" y="188" font-size="15" fill="#ece8dc">PHP · Laravel · Node.js · Express · NestJS</text>
-<path d="M320 200 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="204" width="4" height="14" fill="#ff2a2a"/><text x="334" y="216" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">FRONTEND</text><text x="470" y="216" font-size="15" fill="#ece8dc">JS · TS · Vue · React · Next.js · Tailwind</text>
-<path d="M320 228 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="232" width="4" height="14" fill="#ff2a2a"/><text x="334" y="244" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">DATABASE</text><text x="470" y="244" font-size="15" fill="#ece8dc">MySQL · PostgreSQL · MongoDB · Redis</text>
-<path d="M320 256 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="260" width="4" height="14" fill="#ff2a2a"/><text x="334" y="272" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">SERVER</text><text x="470" y="272" font-size="15" fill="#ece8dc">Linux · Nginx · Docker · AWS · Cloudflare</text>
-<path d="M320 284 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="288" width="4" height="14" fill="#ff2a2a"/><text x="334" y="300" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">TOOLS</text><text x="470" y="300" font-size="15" fill="#ece8dc">Git · GitHub · GitLab · VS Code · Postman · Figma</text>
-<path d="M320 312 H940" stroke="#ece8dc" stroke-opacity=".06"/><rect x="320" y="316" width="4" height="14" fill="#ff2a2a"/><text x="334" y="328" font-size="13" font-weight="700" fill="#f5c400" letter-spacing="2">MOTTO</text><text x="470" y="328" font-size="15" fill="#ece8dc">Make it work. Make it clean.</text>
+<path d="M0 0 H560 L530 44 H0Z" fill="#111318"/><path d="M0 42 H531 L530 44 H0Z" fill="#c8102e"/>
+<rect x="0" y="0" width="6" height="44" fill="#c8102e"/>
+<text x="24" y="29" font-size="15" font-weight="700" fill="#c9d1d9" letter-spacing="3">// DOSSIER — SUBJECT: <tspan fill="#c8102e">ALEX VU</tspan></text>
+<text x="970" y="29" text-anchor="end" font-size="12" fill="#5d6670" letter-spacing="2">FILE 0x1337 · CLEARANCE <tspan fill="#c8102e">ALPHA</tspan></text>
+<path d="M36 80 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="84" width="3" height="14" fill="#c8102e"/><text x="48" y="96" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">ROLE</text><text x="160" y="96" font-size="14" fill="#d7dce2">Fullstack Web Developer</text>
+<path d="M36 109 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="113" width="3" height="14" fill="#c8102e"/><text x="48" y="125" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">BASE</text><text x="160" y="125" font-size="14" fill="#d7dce2">Ha Noi, Viet Nam</text>
+<path d="M36 138 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="142" width="3" height="14" fill="#c8102e"/><text x="48" y="154" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">COMPANY</text><text x="160" y="154" font-size="14" fill="#d7dce2">Protean Studios</text>
+<path d="M36 167 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="171" width="3" height="14" fill="#c8102e"/><text x="48" y="183" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">BACKEND</text><text x="160" y="183" font-size="14" fill="#d7dce2">PHP · Laravel · Node.js · Express · NestJS</text>
+<path d="M36 196 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="200" width="3" height="14" fill="#c8102e"/><text x="48" y="212" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">FRONTEND</text><text x="160" y="212" font-size="14" fill="#d7dce2">JS · TS · Vue · React · Next.js · Tailwind</text>
+<path d="M36 225 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="229" width="3" height="14" fill="#c8102e"/><text x="48" y="241" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">DATABASE</text><text x="160" y="241" font-size="14" fill="#d7dce2">MySQL · PostgreSQL · MongoDB · Redis</text>
+<path d="M36 254 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="258" width="3" height="14" fill="#c8102e"/><text x="48" y="270" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">SERVER</text><text x="160" y="270" font-size="14" fill="#d7dce2">Linux · Nginx · Docker · AWS · Cloudflare</text>
+<path d="M36 283 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="287" width="3" height="14" fill="#c8102e"/><text x="48" y="299" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">TOOLS</text><text x="160" y="299" font-size="14" fill="#d7dce2">Git · GitHub · GitLab · VS Code · Postman</text>
+<path d="M36 312 H610" stroke="#d7dce2" stroke-opacity=".05"/><rect x="36" y="316" width="3" height="14" fill="#c8102e"/><text x="48" y="328" font-size="12" font-weight="700" fill="#5d6670" letter-spacing="2">MOTTO</text><text x="160" y="328" font-size="14" fill="#d7dce2">Make it work. Make it clean.</text>
 
-<rect x="0" y="384" width="1000" height="16" fill="url(#hazard)"/>
+<text x="36" y="361" font-size="13" fill="#5d6670">root@alexvu:~# <tspan class="blink" fill="#c8102e">█</tspan></text>
+<g transform="translate(640,58)">
+  <ellipse cx="170" cy="250" rx="150" ry="60" fill="#8fd3ff" opacity=".06"/>
+  <!-- RGB ghost outlines -->
+  <g class="ghA" fill="none" stroke="#00e5ff" stroke-width="2.5" opacity=".85"><path d="M20 300 C30 232 70 204 104 192 C84 150 92 72 170 32 C248 72 256 150 236 192 C270 204 310 232 320 300 Z"/><path d="M78 206 L262 206 L252 292 L88 292 Z"/></g>
+  <g class="ghB" fill="none" stroke="#ff2d55" stroke-width="2.5" opacity=".85"><path d="M20 300 C30 232 70 204 104 192 C84 150 92 72 170 32 C248 72 256 150 236 192 C270 204 310 232 320 300 Z"/><path d="M78 206 L262 206 L252 292 L88 292 Z"/></g>
+  <g class="ghC" fill="none" stroke="#ffe14d" stroke-width="1.5" opacity=".45"><path d="M20 300 C30 232 70 204 104 192 C84 150 92 72 170 32 C248 72 256 150 236 192 C270 204 310 232 320 300 Z"/></g>
+  <!-- body -->
+  <path d="M20 300 C30 232 70 204 104 192 C84 150 92 72 170 32 C248 72 256 150 236 192 C270 204 310 232 320 300 Z" fill="url(#hoodG)" stroke="#2a2f37" stroke-width="1.5"/>
+  <path d="M170 32 C120 62 104 120 112 176" fill="none" stroke="#8fd3ff" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M170 32 C220 62 236 120 228 176" fill="none" stroke="#8fd3ff" stroke-opacity=".12" stroke-width="2"/>
+  <!-- face void -->
+  <path d="M128 112 C134 80 206 80 212 112 C217 152 196 182 170 188 C144 182 123 152 128 112 Z" fill="#020203"/>
+  <path class="faceGlow" d="M128 112 C134 80 206 80 212 112 C217 152 196 182 170 188 C144 182 123 152 128 112 Z" fill="url(#faceG)"/>
+  <g class="eyes" fill="#c8102e" filter="url(#glowR)"><rect x="146" y="130" width="14" height="3" rx="1.5"/><rect x="180" y="130" width="14" height="3" rx="1.5"/></g>
+  <!-- laptop -->
+  <path d="M78 206 L262 206 L252 292 L88 292 Z" fill="#1c2028" stroke="#56606c" stroke-width="1.5"/><path d="M80 210 L260 210" stroke="#8fd3ff" stroke-opacity=".35"/>
+  <rect x="70" y="292" width="200" height="8" rx="2" fill="#1a1d23" stroke="#3a414b"/>
+  <text x="170" y="256" text-anchor="middle" font-size="22" font-weight="700" fill="#c8102e" filter="url(#glowR)">&lt;/&gt;</text>
+  <!-- hands -->
+  <g fill="#0d0f13" stroke="#2a2f37"><ellipse class="handL" cx="100" cy="292" rx="16" ry="7"/><ellipse class="handR" cx="240" cy="292" rx="16" ry="7"/></g>
+  <!-- glitch slices -->
+  <rect class="slice" x="10" y="150" width="320" height="6" fill="#00e5ff" opacity="0"/>
+  <rect class="slice2" x="10" y="226" width="320" height="4" fill="#ff2d55" opacity="0"/>
 </g>
-<path d="M1 1 H970 L999 30 V399 H30 L1 370Z" fill="none" stroke="#ff2a2a" stroke-opacity=".7" stroke-width="2"/>
+<rect x="0" y="392" width="1000" height="8" fill="url(#hazard)"/>
+</g>
+<path d="M1 1 H970 L999 30 V399 H30 L1 370Z" fill="none" stroke="#c8102e" stroke-opacity=".55" stroke-width="1.5"/>
 </svg>

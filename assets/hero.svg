@@ -1,65 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
-<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#0a0a0c"/><rect width="4" height="4" fill="#131317"/><rect x="4" y="4" width="4" height="4" fill="#131317"/></pattern>
-<pattern id="hazard" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="24" height="24" fill="#111"/><rect width="12" height="24" fill="#f5c400"/></pattern>
+<defs><pattern id="carbon" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#07080b"/><rect width="4" height="4" fill="#0d0f13"/><rect x="4" y="4" width="4" height="4" fill="#0d0f13"/></pattern>
+<pattern id="hazard" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="20" height="20" fill="#0b0c0f"/><rect width="7" height="20" fill="#c8102e" opacity=".85"/></pattern>
 <filter id="glowR" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3a8"/><stop offset=".45" stop-color="#f5c400"/><stop offset="1" stop-color="#b37d00"/></linearGradient>
-<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".48" stop-color="#c3cad3"/><stop offset=".52" stop-color="#7d8792"/><stop offset="1" stop-color="#d7dde4"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <clipPath id="frame"><path d="M24 0 H1000 V330 L970 360 H0 V24Z"/></clipPath>
 <clipPath id="tclip"><text x="500" y="205" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="120" letter-spacing="6">ALEX VU</text></clipPath>
+<radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".8"/></radialGradient>
 </defs>
-<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.2s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
-.sweep{animation:sw 3.8s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}60%,100%{transform:translateX(1100px) skewX(-20deg)}}
-.scan{animation:sc 5s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
-.glitch{animation:gl 5s steps(1) infinite}@keyframes gl{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(-8px,0)}93%{transform:translate(6px,0)}95%{transform:translate(0,0)}}
-.spin{transform-origin:150px 200px;animation:spin 10s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-.spinR{transform-origin:150px 200px;animation:spin 16s linear infinite reverse}
-.pulse{animation:pu 2s ease-in-out infinite alternate}@keyframes pu{from{opacity:.55}to{opacity:1}}</style>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}.blink{animation:bk 1.4s steps(1) infinite}@keyframes bk{50%{opacity:.15}}
+.sweep{animation:sw 4.5s cubic-bezier(.6,0,.3,1) infinite}@keyframes sw{0%{transform:translateX(-300px) skewX(-20deg)}55%,100%{transform:translateX(1100px) skewX(-20deg)}}
+.scan{animation:sc 6s linear infinite}@keyframes sc{from{transform:translateX(-60px)}to{transform:translateX(1060px)}}
+.glitch{animation:gl 6s steps(1) infinite}@keyframes gl{0%,92%,100%{transform:translate(0,0)}93%{transform:translate(-7px,0)}95%{transform:translate(5px,0)}97%{transform:translate(0,0)}}</style>
 <g clip-path="url(#frame)">
 <rect width="1000" height="360" fill="url(#carbon)"/>
-<!-- angled red slabs -->
-<path d="M0 250 L260 250 L210 360 L0 360Z" fill="#ff2a2a" opacity=".12"/>
-<path d="M1000 0 L760 0 L820 90 L1000 90Z" fill="#ff2a2a" opacity=".12"/>
-<path d="M640 360 L700 300 L1000 300 L1000 360Z" fill="#f5c400" opacity=".07"/>
-<!-- hazard strips -->
-<rect x="0" y="0" width="1000" height="10" fill="url(#hazard)"/>
-<rect x="0" y="350" width="1000" height="10" fill="url(#hazard)"/>
-<!-- grid lines -->
-<g stroke="#ece8dc" stroke-opacity=".05"><path d="M50 10 V350"/><path d="M100 10 V350"/><path d="M150 10 V350"/><path d="M200 10 V350"/><path d="M250 10 V350"/><path d="M300 10 V350"/><path d="M350 10 V350"/><path d="M400 10 V350"/><path d="M450 10 V350"/><path d="M500 10 V350"/><path d="M550 10 V350"/><path d="M600 10 V350"/><path d="M650 10 V350"/><path d="M700 10 V350"/><path d="M750 10 V350"/><path d="M800 10 V350"/><path d="M850 10 V350"/><path d="M900 10 V350"/><path d="M950 10 V350"/></g>
-<!-- red scanner -->
-<rect class="scan" x="0" y="10" width="3" height="340" fill="#ff2a2a" opacity=".55" filter="url(#glowR)"/>
-
-<!-- HUD top-left -->
+<path d="M0 250 L260 250 L210 360 L0 360Z" fill="#c8102e" opacity=".07"/>
+<path d="M1000 0 L760 0 L820 90 L1000 90Z" fill="#c8102e" opacity=".07"/>
+<rect x="0" y="0" width="1000" height="6" fill="url(#hazard)"/>
+<rect x="0" y="354" width="1000" height="6" fill="url(#hazard)"/>
+<g stroke="#d7dce2" stroke-opacity=".035"><path d="M50 6 V354"/><path d="M100 6 V354"/><path d="M150 6 V354"/><path d="M200 6 V354"/><path d="M250 6 V354"/><path d="M300 6 V354"/><path d="M350 6 V354"/><path d="M400 6 V354"/><path d="M450 6 V354"/><path d="M500 6 V354"/><path d="M550 6 V354"/><path d="M600 6 V354"/><path d="M650 6 V354"/><path d="M700 6 V354"/><path d="M750 6 V354"/><path d="M800 6 V354"/><path d="M850 6 V354"/><path d="M900 6 V354"/><path d="M950 6 V354"/></g>
+<rect class="scan" x="0" y="6" width="2" height="348" fill="#c8102e" opacity=".4" filter="url(#glowR)"/>
 <g transform="translate(40,36)">
-  <path d="M0 0 H190 L176 26 H0Z" fill="#ff2a2a"/>
-  <circle class="blink" cx="14" cy="13" r="5" fill="#0a0a0c"/>
-  <text x="28" y="18" font-size="13" font-weight="700" fill="#0a0a0c" letter-spacing="2">TARGET LOCKED</text>
+  <path d="M0 0 H190 L176 26 H0Z" fill="#c8102e"/>
+  <circle class="blink" cx="14" cy="13" r="5" fill="#07080b"/>
+  <text x="28" y="18" font-size="13" font-weight="700" fill="#07080b" letter-spacing="2">TARGET LOCKED</text>
 </g>
-<text x="40" y="88" font-size="12" fill="#8a7d55" letter-spacing="2">ID://ALEXVU.EXE</text>
-<text x="40" y="106" font-size="12" fill="#8a7d55" letter-spacing="2">LOC://HA_NOI.VN</text>
-<!-- HUD top-right -->
+<text x="40" y="88" font-size="12" fill="#5d6670" letter-spacing="2">ID://ALEXVU.EXE</text>
+<text x="40" y="106" font-size="12" fill="#5d6670" letter-spacing="2">LOC://HA_NOI.VN</text>
 <g text-anchor="end" font-size="12" letter-spacing="2">
-  <text x="960" y="44" fill="#f5c400">SYS STATUS ▮▮▮▮▮▯ ONLINE</text>
-  <text x="960" y="62" fill="#8a7d55">CLASS: FULLSTACK // RANK: S</text>
+  <text x="960" y="44" fill="#c9d1d9">SYS STATUS ▮▮▮▮▮▯ <tspan fill="#c8102e">ONLINE</tspan></text>
+  <text x="960" y="62" fill="#5d6670">CLASS: FULLSTACK // RANK: S</text>
 </g>
-<!-- reticle around title -->
-<g stroke="#ff2a2a" stroke-width="3" fill="none">
+<g stroke="#c8102e" stroke-width="2.5" fill="none">
   <path d="M195 115 V95 H225"/><path d="M805 115 V95 H775"/><path d="M195 225 V245 H225"/><path d="M805 225 V245 H775"/>
 </g>
-<g stroke="#ff2a2a" stroke-width="1.5" opacity=".6"><path d="M165 170 H190"/><path d="M810 170 H835"/></g>
-
-<!-- title -->
+<g stroke="#c9d1d9" stroke-width="1" opacity=".35"><path d="M165 170 H190"/><path d="M810 170 H835"/></g>
 <g class="glitch">
-  <text x="507" y="211" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="120" letter-spacing="6" fill="#ff2a2a">ALEX VU</text>
-  <text x="500" y="205" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="120" letter-spacing="6" fill="url(#gold)" stroke="#3a2a00" stroke-width="1.5">ALEX VU</text>
+  <text x="506" y="210" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="120" letter-spacing="6" fill="#c8102e" opacity=".9">ALEX VU</text>
+  <text x="500" y="205" text-anchor="middle" font-family='"Arial Black","Helvetica Neue",Impact,Arial,sans-serif' font-weight="900" font-style="italic" font-size="120" letter-spacing="6" fill="url(#chrome)" stroke="#1a1d22" stroke-width="1.5">ALEX VU</text>
   <g clip-path="url(#tclip)"><rect class="sweep" x="0" y="80" width="120" height="160" fill="url(#shine)"/></g>
 </g>
-
-<!-- subtitle bar -->
 <g transform="translate(250,270)">
-  <path d="M18 0 H500 L482 36 H0Z" fill="#ff2a2a"/>
-  <path d="M8 0 H14 L-4 36 H-10Z" fill="#f5c400"/><path d="M504 0 H510 L492 36 H486Z" fill="#f5c400"/>
-  <text x="250" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#0a0a0c" letter-spacing="3">// FULLSTACK · PHP · LARAVEL · JS</text>
+  <path d="M18 0 H500 L482 36 H0Z" fill="#111318" stroke="#c8102e" stroke-width="1.5"/>
+  <path d="M8 0 H14 L-4 36 H-10Z" fill="#c8102e"/><path d="M504 0 H510 L492 36 H486Z" fill="#c8102e"/>
+  <text x="250" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#c9d1d9" letter-spacing="3">// FULLSTACK · PHP · LARAVEL · JS</text>
 </g>
+<rect width="1000" height="360" fill="url(#vig)"/>
 </g>
-<path d="M24 1 H999 V330 L970 359 H1 V24Z" fill="none" stroke="#ff2a2a" stroke-opacity=".7" stroke-width="2"/>
+<path d="M24 1 H999 V330 L970 359 H1 V24Z" fill="none" stroke="#c8102e" stroke-opacity=".55" stroke-width="1.5"/>
 </svg>
