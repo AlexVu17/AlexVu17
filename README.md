@@ -20,23 +20,23 @@
 
 <table>
   <tr>
-    <td align="center" width="170"><img src="https://img.shields.io/badge/⚙_BACKEND-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td align="center" width="170"><img src="https://img.shields.io/badge/BACKEND-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=php,laravel,nodejs" /></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://img.shields.io/badge/🎨_FRONTEND-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td align="center"><img src="https://img.shields.io/badge/FRONTEND-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=js,html,css,bootstrap,tailwind" /></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://img.shields.io/badge/🗄_DATABASE-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td align="center"><img src="https://img.shields.io/badge/DATABASE-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=mysql" /></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://img.shields.io/badge/🖥_SERVER-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td align="center"><img src="https://img.shields.io/badge/SERVER-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=linux" /></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://img.shields.io/badge/🧰_TOOLS-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td align="center"><img src="https://img.shields.io/badge/TOOLS-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=git,github,vscode,postman" /></td>
   </tr>
 </table>
