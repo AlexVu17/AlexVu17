@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380">
+<defs>
+  <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#00f0ff"/>
+    <stop offset=".5" stop-color="#9d4dff"/>
+    <stop offset="1" stop-color="#ff2e88"/>
+  </linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#160a33"/>
+    <stop offset="1" stop-color="#2a0b3d"/>
+  </linearGradient>
+  <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#00f0ff"/>
+    <stop offset="1" stop-color="#ff2e88"/>
+  </linearGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<style>
+  text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}
+  .k{fill:#ff4fd8;font-weight:700}
+  .v{fill:#f2ecff}
+  .rot{transform-origin:150px 205px;animation:rot 14s linear infinite}
+  @keyframes rot{to{transform:rotate(360deg)}}
+  .pulse{animation:pu 2.5s ease-in-out infinite alternate}
+  @keyframes pu{from{opacity:.5}to{opacity:1}}
+  .cur{animation:bl 1s steps(1) infinite}
+  @keyframes bl{50%{opacity:0}}
+  .line{opacity:0;animation:in .4s forwards}
+  @keyframes in{to{opacity:1}}
+</style>
+
+<rect x="1.5" y="1.5" width="997" height="377" rx="16" fill="url(#bg)" stroke="url(#border)" stroke-width="3"/>
+
+<!-- title bar -->
+<path d="M3 46 H997" stroke="#ffffff" stroke-opacity=".08"/>
+<circle cx="30" cy="24" r="7" fill="#ff5f57"/>
+<circle cx="54" cy="24" r="7" fill="#febc2e"/>
+<circle cx="78" cy="24" r="7" fill="#28c840"/>
+<text x="500" y="29" text-anchor="middle" font-size="14" fill="#b9a8e8">alexvu@dev: ~ — neofetch</text>
+
+<!-- logo -->
+<g class="pulse" filter="url(#glow)">
+  <polygon class="rot" points="150,105 237,155 237,255 150,305 63,255 63,155" fill="none" stroke="url(#logo)" stroke-width="3" stroke-dasharray="14 8"/>
+</g>
+<polygon points="150,125 220,165 220,245 150,285 80,245 80,165" fill="#0d0221" stroke="url(#logo)" stroke-width="2"/>
+<text x="150" y="226" text-anchor="middle" font-size="64" font-weight="900" fill="url(#logo)" filter="url(#glow)" style="font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-style:italic">AV</text>
+
+<!-- info -->
+<g font-size="17">
+  <text x="310" y="88"><tspan fill="#00f0ff" font-weight="700">alexvu</tspan><tspan fill="#f2ecff">@</tspan><tspan fill="#00f0ff" font-weight="700">dev</tspan></text>
+  <path d="M310 100 H560" stroke="url(#border)" stroke-width="2"/>
+  <text class="line" style="animation-delay:.2s" x="310" y="130"><tspan class="k">OS       </tspan><tspan class="v" x="430">Human v2026</tspan></text>
+  <text class="line" style="animation-delay:.4s" x="310" y="157"><tspan class="k">Role     </tspan><tspan class="v" x="430">Web Developer</tspan></text>
+  <text class="line" style="animation-delay:.6s" x="310" y="184"><tspan class="k">Location </tspan><tspan class="v" x="430">Viet Nam 🇻🇳</tspan></text>
+  <text class="line" style="animation-delay:.8s" x="310" y="211"><tspan class="k">Backend  </tspan><tspan class="v" x="430">PHP · Laravel · Node.js</tspan></text>
+  <text class="line" style="animation-delay:1s" x="310" y="238"><tspan class="k">Frontend </tspan><tspan class="v" x="430">JavaScript · HTML · CSS · Tailwind</tspan></text>
+  <text class="line" style="animation-delay:1.2s" x="310" y="265"><tspan class="k">Database </tspan><tspan class="v" x="430">MySQL</tspan></text>
+  <text class="line" style="animation-delay:1.4s" x="310" y="292"><tspan class="k">Fuel     </tspan><tspan class="v" x="430">coffee ☕ + lo-fi 🎧</tspan></text>
+  <text class="line" style="animation-delay:1.6s" x="310" y="319"><tspan class="k">Motto    </tspan><tspan class="v" x="430" fill="#fff35c">"make it work, make it clean"</tspan></text>
+</g>
+
+<!-- palette -->
+<g class="line" style="animation-delay:1.8s">
+  <rect x="770" y="118" width="26" height="26" rx="5" fill="#00f0ff"/>
+  <rect x="802" y="118" width="26" height="26" rx="5" fill="#2ee6a6"/>
+  <rect x="834" y="118" width="26" height="26" rx="5" fill="#fff35c"/>
+  <rect x="866" y="118" width="26" height="26" rx="5" fill="#ff8a3d"/>
+  <rect x="898" y="118" width="26" height="26" rx="5" fill="#ff2e88"/>
+  <rect x="930" y="118" width="26" height="26" rx="5" fill="#9d4dff"/>
+</g>
+
+<!-- prompt -->
+<text x="310" y="356" font-size="16"><tspan fill="#2ee6a6" font-weight="700">alexvu@dev</tspan><tspan fill="#f2ecff">:</tspan><tspan fill="#00f0ff">~</tspan><tspan fill="#f2ecff">$ </tspan><tspan fill="#f2ecff">git push --force-with-dreams </tspan><tspan class="cur" fill="#00f0ff">█</tspan></text>
+</svg>
