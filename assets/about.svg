@@ -28,8 +28,6 @@
   @keyframes pu{from{opacity:.5}to{opacity:1}}
   .cur{animation:bl 1s steps(1) infinite}
   @keyframes bl{50%{opacity:0}}
-  .line{opacity:0;animation:in .4s forwards}
-  @keyframes in{to{opacity:1}}
 </style>
 
 <rect x="1.5" y="1.5" width="997" height="377" rx="16" fill="url(#bg)" stroke="url(#border)" stroke-width="3"/>

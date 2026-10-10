@@ -45,8 +45,8 @@
   .glitchB{animation:gB 4s steps(1) infinite}
   @keyframes gA{0%,88%,100%{transform:translate(0,0);opacity:0}89%{transform:translate(-6px,2px);opacity:.85}91%{transform:translate(5px,-3px);opacity:.85}93%{opacity:0}}
   @keyframes gB{0%,88%,100%{transform:translate(0,0);opacity:0}90%{transform:translate(6px,-2px);opacity:.85}92%{transform:translate(-4px,3px);opacity:.85}94%{opacity:0}}
-  .role{opacity:0;animation:role 9s infinite}
-  @keyframes role{0%{opacity:0;transform:translateY(8px)}4%,30%{opacity:1;transform:translateY(0)}34%,100%{opacity:0;transform:translateY(-8px)}}
+  .role{animation:role 9s infinite}
+  @keyframes role{0%,28%{opacity:1;transform:translateY(0)}32%{opacity:0;transform:translateY(-8px)}33%,95%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
   .cursor{animation:bl 1s steps(1) infinite}
   @keyframes bl{50%{opacity:0}}
   .sunPulse{animation:sp 4s ease-in-out infinite alternate}
@@ -109,7 +109,7 @@
 <g text-anchor="middle" class="mono" font-size="20" font-weight="700" letter-spacing="3">
   <rect x="300" y="276" width="400" height="40" rx="20" fill="#07010f" fill-opacity=".75" stroke="#00f0ff" stroke-opacity=".8"/>
   <text class="role mono" x="500" y="303" fill="#00f0ff">&gt; WEB DEVELOPER</text>
-  <text class="role mono" x="500" y="303" fill="#ff4fd8" style="animation-delay:3s">&gt; PHP · LARAVEL · JS</text>
-  <text class="role mono" x="500" y="303" fill="#fff35c" style="animation-delay:6s">&gt; CODE · SHIP · REPEAT</text>
+  <text class="role mono" x="500" y="303" fill="#ff4fd8" style="animation-delay:-6s">&gt; PHP · LARAVEL · JS</text>
+  <text class="role mono" x="500" y="303" fill="#fff35c" style="animation-delay:-3s">&gt; CODE · SHIP · REPEAT</text>
 </g>
 </svg>
