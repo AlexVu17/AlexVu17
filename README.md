@@ -4,34 +4,55 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/root-web__developer-00ff41?style=flat-square&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/stack-laravel_·_js-00ff41?style=flat-square&labelColor=0d1117" />
-<img src="https://img.shields.io/badge/status-online-00ff41?style=flat-square&labelColor=0d1117" />
+<img src="https://img.shields.io/badge/CLASS-FULLSTACK-ff2a2a?style=for-the-badge&labelColor=0a0a0c" />
+<img src="https://img.shields.io/badge/MAIN-LARAVEL_+_JS-f5c400?style=for-the-badge&labelColor=0a0a0c" />
+<img src="https://img.shields.io/badge/BASE-HA_NOI-ff2a2a?style=for-the-badge&labelColor=0a0a0c" />
 
 </div>
 
 <br/>
 
-<img src="./assets/about.svg" width="100%" alt="profile.cfg" />
+<img src="./assets/about.svg" width="100%" alt="dossier" />
 
-### `root@alexvu:~# ls ./stack`
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=php,laravel,nodejs,mysql,js,html,css,bootstrap,tailwind,git,github,vscode,postman,linux&theme=dark&perline=7" />
-
-</div>
-
-### `root@alexvu:~# git log --stats`
+## ⚔️ Arsenal
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ThaoVuDEV&show_icons=true&include_all_commits=true&bg_color=020a04&title_color=00ff41&icon_color=00ff41&text_color=c8ffd4&ring_color=00ff41&border_color=0f5323&border_radius=10" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThaoVuDEV&layout=compact&langs_count=6&bg_color=020a04&title_color=00ff41&text_color=c8ffd4&border_color=0f5323&border_radius=10" />
+<table>
+  <tr>
+    <td align="center" width="170"><img src="https://img.shields.io/badge/⚙_BACKEND-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td><img src="https://skillicons.dev/icons?i=php,laravel,nodejs" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://img.shields.io/badge/🎨_FRONTEND-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td><img src="https://skillicons.dev/icons?i=js,html,css,bootstrap,tailwind" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://img.shields.io/badge/🗄_DATABASE-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td><img src="https://skillicons.dev/icons?i=mysql" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://img.shields.io/badge/🖥_SERVER-f5c400?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td><img src="https://skillicons.dev/icons?i=linux" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://img.shields.io/badge/🧰_TOOLS-ff2a2a?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td><img src="https://skillicons.dev/icons?i=git,github,vscode,postman" /></td>
+  </tr>
+</table>
 
 </div>
 
-### `root@alexvu:~# ./dragon --eat contributions`
+## 📊 Battle Stats
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=ThaoVuDEV&show_icons=true&include_all_commits=true&bg_color=0a0a0c&title_color=f5c400&icon_color=ff2a2a&text_color=ece8dc&ring_color=ff2a2a&border_color=ff2a2a&border_radius=4" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThaoVuDEV&layout=compact&langs_count=6&bg_color=0a0a0c&title_color=f5c400&text_color=ece8dc&border_color=ff2a2a&border_radius=4" />
+
+</div>
+
+## 🐉 Dragon vs. Contributions
 
 <div align="center">
 <picture>
@@ -41,17 +62,15 @@
 </picture>
 </div>
 
-### `root@alexvu:~# ping alexvu`
+## 📡 Comms
 
 <div align="center">
 
-<a href="https://www.facebook.com/thaovu.17"><img src="https://img.shields.io/badge/facebook-0d1117?style=flat-square&logo=facebook&logoColor=00ff41" /></a>
-<a href="https://github.com/ThaoVuDEV"><img src="https://img.shields.io/badge/github-0d1117?style=flat-square&logo=github&logoColor=00ff41" /></a>
-<!-- Điền link thật rồi bỏ comment:
-<a href="https://linkedin.com/in/YOUR-ID"><img src="https://img.shields.io/badge/linkedin-0d1117?style=flat-square&logo=linkedin&logoColor=00ff41" /></a>
-<a href="mailto:YOUR@EMAIL.COM"><img src="https://img.shields.io/badge/email-0d1117?style=flat-square&logo=gmail&logoColor=00ff41" /></a>
--->
+<a href="https://proteanstudios.com"><img src="https://img.shields.io/badge/PROTEAN_STUDIOS-ff2a2a?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+<a href="https://avlab.vn"><img src="https://img.shields.io/badge/AVLAB.VN-f5c400?style=for-the-badge&logo=googlechrome&logoColor=0a0a0c" /></a>
+<a href="https://www.facebook.com/thaovu.17"><img src="https://img.shields.io/badge/FACEBOOK-1877f2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
+<a href="https://github.com/ThaoVuDEV"><img src="https://img.shields.io/badge/GITHUB-0a0a0c?style=for-the-badge&logo=github&logoColor=f5c400" /></a>
 
 </div>
 
-<img src="./assets/footer.svg" width="100%" alt="logout" />
+<img src="./assets/footer.svg" width="100%" alt="end of transmission" />
