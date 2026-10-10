@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 70" width="1000" height="70">
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace;font-size:15px}.cur{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}</style>
+<path d="M0 1 H1000" stroke="#00ff41" stroke-opacity=".4" stroke-dasharray="6 6"/>
+<text x="500" y="32" text-anchor="middle"><tspan fill="#00ff41">root@alexvu</tspan><tspan fill="#6b8f73">:~# </tspan><tspan fill="#c8ffd4">logout</tspan></text>
+<text x="500" y="56" text-anchor="middle" fill="#6b8f73" font-size="13">[ connection to alexvu closed. thanks for visiting ] <tspan class="cur" fill="#00ff41">█</tspan></text>
+</svg>

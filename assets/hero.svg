@@ -1,115 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="1000" height="340">
 <defs>
-  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#0d0221"/>
-    <stop offset=".45" stop-color="#2b0b5a"/>
-    <stop offset=".8" stop-color="#a1197a"/>
-    <stop offset="1" stop-color="#ff4f9a"/>
-  </linearGradient>
-  <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#fff35c"/>
-    <stop offset=".55" stop-color="#ff8a3d"/>
-    <stop offset="1" stop-color="#ff2e88"/>
-  </linearGradient>
-  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#00f0ff"/>
-    <stop offset=".5" stop-color="#ffffff"/>
-    <stop offset="1" stop-color="#ff4fd8"/>
-  </linearGradient>
-  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#1a0638"/>
-    <stop offset="1" stop-color="#07010f"/>
-  </linearGradient>
-  <mask id="sunStripes">
-    <rect x="380" y="90" width="240" height="160" fill="#fff"/>
-    <rect x="380" y="186" width="240" height="3" fill="#000"/>
-    <rect x="380" y="198" width="240" height="5" fill="#000"/>
-    <rect x="380" y="211" width="240" height="7" fill="#000"/>
-    <rect x="380" y="225" width="240" height="9" fill="#000"/>
-  </mask>
-  <clipPath id="groundClip"><rect x="0" y="240" width="1000" height="120"/></clipPath>
-  <filter id="glow" x="-20%" y="-50%" width="140%" height="200%">
-    <feGaussianBlur stdDeviation="6" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="18"/>
-  </filter>
+<filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".35"/></pattern>
+<radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/></radialGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".9"/><stop offset=".25" stop-color="#000" stop-opacity="0"/><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></linearGradient>
+<clipPath id="clip"><rect width="1000" height="340" rx="12"/></clipPath>
 </defs>
 <style>
-  .star{animation:tw 3s ease-in-out infinite}
-  @keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
-  .hl{animation:run 2.4s cubic-bezier(.55,0,1,.6) infinite;opacity:0}
-  @keyframes run{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(120px);opacity:1}}
-  .glitchA{animation:gA 4s steps(1) infinite}
-  .glitchB{animation:gB 4s steps(1) infinite}
-  @keyframes gA{0%,88%,100%{transform:translate(0,0);opacity:0}89%{transform:translate(-6px,2px);opacity:.85}91%{transform:translate(5px,-3px);opacity:.85}93%{opacity:0}}
-  @keyframes gB{0%,88%,100%{transform:translate(0,0);opacity:0}90%{transform:translate(6px,-2px);opacity:.85}92%{transform:translate(-4px,3px);opacity:.85}94%{opacity:0}}
-  .role{animation:role 9s infinite}
-  @keyframes role{0%,28%{opacity:1;transform:translateY(0)}32%{opacity:0;transform:translateY(-8px)}33%,95%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
-  .cursor{animation:bl 1s steps(1) infinite}
-  @keyframes bl{50%{opacity:0}}
-  .sunPulse{animation:sp 4s ease-in-out infinite alternate}
-  @keyframes sp{from{opacity:.55}to{opacity:.95}}
-  text{font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif}
-  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace}
+.rain{fill:#00ff41;font-size:15px;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-380px)}to{transform:translateY(360px)}}
+.gA{animation:gA 3.5s steps(1) infinite}.gB{animation:gB 3.5s steps(1) infinite}
+@keyframes gA{0%,86%,100%{opacity:0;transform:none}87%{opacity:.8;transform:translate(-5px,1px)}89%{opacity:.8;transform:translate(4px,-2px)}91%{opacity:0}}
+@keyframes gB{0%,86%,100%{opacity:0;transform:none}88%{opacity:.7;transform:translate(5px,-1px)}90%{opacity:.7;transform:translate(-3px,2px)}92%{opacity:0}}
+.flick{animation:fl 6s steps(1) infinite}
+@keyframes fl{0%,100%{opacity:1}72%{opacity:.55}73%{opacity:1}74%{opacity:.7}}
+.cur{animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.sweep{animation:sw 4s linear infinite}@keyframes sw{from{transform:translateY(-40px)}to{transform:translateY(360px)}}
 </style>
-
-<rect width="1000" height="360" rx="14" fill="url(#sky)"/>
-
-<!-- stars -->
-<g fill="#fff">
-  <circle class="star" cx="80" cy="40" r="1.6"/>
-  <circle class="star" cx="170" cy="95" r="1.2" style="animation-delay:-1s"/>
-  <circle class="star" cx="260" cy="30" r="1.4" style="animation-delay:-2s"/>
-  <circle class="star" cx="330" cy="120" r="1" style="animation-delay:-.5s"/>
-  <circle class="star" cx="690" cy="50" r="1.5" style="animation-delay:-1.5s"/>
-  <circle class="star" cx="760" cy="110" r="1.1" style="animation-delay:-2.4s"/>
-  <circle class="star" cx="850" cy="35" r="1.7" style="animation-delay:-.8s"/>
-  <circle class="star" cx="930" cy="90" r="1.2" style="animation-delay:-1.9s"/>
-  <circle class="star" cx="50" cy="150" r="1" style="animation-delay:-2.7s"/>
-  <circle class="star" cx="960" cy="160" r="1" style="animation-delay:-.3s"/>
+<g clip-path="url(#clip)">
+<rect width="1000" height="340" fill="#020a04"/>
+<g><text class="rain" style="animation-duration:9.89s;animation-delay:-8.91s" opacity="0.45" x="8" y="0"><tspan x="8" dy="17">7</tspan><tspan x="8" dy="17">*</tspan><tspan x="8" dy="17">F</tspan><tspan x="8" dy="17">3</tspan><tspan x="8" dy="17">D</tspan><tspan x="8" dy="17">+</tspan><tspan x="8" dy="17">7</tspan><tspan x="8" dy="17">7</tspan><tspan x="8" dy="17">F</tspan><tspan x="8" dy="17">B</tspan></text>
+<text class="rain" style="animation-duration:7.83s;animation-delay:-3.52s" opacity="0.36" x="30" y="0"><tspan x="30" dy="17">F</tspan><tspan x="30" dy="17">D</tspan><tspan x="30" dy="17">1</tspan><tspan x="30" dy="17">B</tspan><tspan x="30" dy="17">{</tspan><tspan x="30" dy="17">8</tspan><tspan x="30" dy="17">}</tspan><tspan x="30" dy="17">*</tspan><tspan x="30" dy="17">A</tspan><tspan x="30" dy="17">8</tspan><tspan x="30" dy="17">B</tspan><tspan x="30" dy="17">}</tspan><tspan x="30" dy="17">5</tspan></text>
+<text class="rain" style="animation-duration:7.11s;animation-delay:-4.56s" opacity="0.41" x="52" y="0"><tspan x="52" dy="17">0</tspan><tspan x="52" dy="17">+</tspan><tspan x="52" dy="17">]</tspan><tspan x="52" dy="17">/</tspan><tspan x="52" dy="17">9</tspan><tspan x="52" dy="17">/</tspan><tspan x="52" dy="17">$</tspan><tspan x="52" dy="17">2</tspan><tspan x="52" dy="17">3</tspan><tspan x="52" dy="17">0</tspan></text>
+<text class="rain" style="animation-duration:7.6s;animation-delay:-5.33s" opacity="0.33" x="74" y="0"><tspan x="74" dy="17">7</tspan><tspan x="74" dy="17">C</tspan><tspan x="74" dy="17">5</tspan><tspan x="74" dy="17">1</tspan><tspan x="74" dy="17">D</tspan><tspan x="74" dy="17">1</tspan><tspan x="74" dy="17">+</tspan><tspan x="74" dy="17">8</tspan><tspan x="74" dy="17">A</tspan><tspan x="74" dy="17">+</tspan></text>
+<text class="rain" style="animation-duration:5.62s;animation-delay:-5.53s" opacity="0.41" x="96" y="0"><tspan x="96" dy="17">+</tspan><tspan x="96" dy="17">D</tspan><tspan x="96" dy="17">@</tspan><tspan x="96" dy="17">3</tspan><tspan x="96" dy="17">5</tspan><tspan x="96" dy="17">*</tspan><tspan x="96" dy="17">D</tspan><tspan x="96" dy="17">{</tspan><tspan x="96" dy="17">{</tspan><tspan x="96" dy="17">A</tspan><tspan x="96" dy="17">0</tspan><tspan x="96" dy="17">C</tspan><tspan x="96" dy="17">#</tspan><tspan x="96" dy="17">3</tspan><tspan x="96" dy="17">F</tspan><tspan x="96" dy="17">7</tspan><tspan x="96" dy="17">7</tspan></text>
+<text class="rain" style="animation-duration:8.4s;animation-delay:-5.48s" opacity="0.28" x="118" y="0"><tspan x="118" dy="17">F</tspan><tspan x="118" dy="17">#</tspan><tspan x="118" dy="17">]</tspan><tspan x="118" dy="17">5</tspan><tspan x="118" dy="17">5</tspan><tspan x="118" dy="17">]</tspan><tspan x="118" dy="17">6</tspan><tspan x="118" dy="17">+</tspan><tspan x="118" dy="17">1</tspan><tspan x="118" dy="17">/</tspan><tspan x="118" dy="17">}</tspan><tspan x="118" dy="17">*</tspan><tspan x="118" dy="17">8</tspan><tspan x="118" dy="17">{</tspan><tspan x="118" dy="17">7</tspan><tspan x="118" dy="17">1</tspan><tspan x="118" dy="17">2</tspan><tspan x="118" dy="17">1</tspan><tspan x="118" dy="17">5</tspan></text>
+<text class="rain" style="animation-duration:9.93s;animation-delay:-5.29s" opacity="0.31" x="140" y="0"><tspan x="140" dy="17">5</tspan><tspan x="140" dy="17">0</tspan><tspan x="140" dy="17">%</tspan><tspan x="140" dy="17">3</tspan><tspan x="140" dy="17">5</tspan><tspan x="140" dy="17">=</tspan><tspan x="140" dy="17">B</tspan><tspan x="140" dy="17">4</tspan><tspan x="140" dy="17">0</tspan><tspan x="140" dy="17">4</tspan><tspan x="140" dy="17">F</tspan><tspan x="140" dy="17">2</tspan><tspan x="140" dy="17">%</tspan><tspan x="140" dy="17">=</tspan><tspan x="140" dy="17">0</tspan><tspan x="140" dy="17">6</tspan></text>
+<text class="rain" style="animation-duration:8.09s;animation-delay:-6.35s" opacity="0.31" x="162" y="0"><tspan x="162" dy="17">B</tspan><tspan x="162" dy="17">{</tspan><tspan x="162" dy="17">3</tspan><tspan x="162" dy="17">A</tspan><tspan x="162" dy="17">9</tspan><tspan x="162" dy="17">2</tspan><tspan x="162" dy="17">F</tspan><tspan x="162" dy="17">3</tspan><tspan x="162" dy="17">1</tspan><tspan x="162" dy="17">$</tspan><tspan x="162" dy="17">E</tspan><tspan x="162" dy="17">0</tspan><tspan x="162" dy="17">+</tspan><tspan x="162" dy="17">D</tspan><tspan x="162" dy="17">#</tspan></text>
+<text class="rain" style="animation-duration:7.12s;animation-delay:-0.77s" opacity="0.58" x="184" y="0"><tspan x="184" dy="17">E</tspan><tspan x="184" dy="17">0</tspan><tspan x="184" dy="17">D</tspan><tspan x="184" dy="17">=</tspan><tspan x="184" dy="17">%</tspan><tspan x="184" dy="17">9</tspan><tspan x="184" dy="17">7</tspan><tspan x="184" dy="17">6</tspan><tspan x="184" dy="17">2</tspan><tspan x="184" dy="17">0</tspan><tspan x="184" dy="17">3</tspan><tspan x="184" dy="17">4</tspan><tspan x="184" dy="17">4</tspan><tspan x="184" dy="17">1</tspan></text>
+<text class="rain" style="animation-duration:8.77s;animation-delay:-5.92s" opacity="0.65" x="206" y="0"><tspan x="206" dy="17">0</tspan><tspan x="206" dy="17">2</tspan><tspan x="206" dy="17">8</tspan><tspan x="206" dy="17">D</tspan><tspan x="206" dy="17">[</tspan><tspan x="206" dy="17">]</tspan><tspan x="206" dy="17">=</tspan><tspan x="206" dy="17">/</tspan><tspan x="206" dy="17">E</tspan><tspan x="206" dy="17">7</tspan><tspan x="206" dy="17">D</tspan><tspan x="206" dy="17">[</tspan><tspan x="206" dy="17">{</tspan><tspan x="206" dy="17">+</tspan><tspan x="206" dy="17">2</tspan></text>
+<text class="rain" style="animation-duration:6.5s;animation-delay:-1.41s" opacity="0.4" x="228" y="0"><tspan x="228" dy="17">@</tspan><tspan x="228" dy="17">+</tspan><tspan x="228" dy="17">+</tspan><tspan x="228" dy="17">B</tspan><tspan x="228" dy="17">3</tspan><tspan x="228" dy="17">1</tspan><tspan x="228" dy="17">8</tspan><tspan x="228" dy="17">D</tspan><tspan x="228" dy="17">7</tspan><tspan x="228" dy="17">C</tspan><tspan x="228" dy="17">/</tspan></text>
+<text class="rain" style="animation-duration:8.05s;animation-delay:-0.46s" opacity="0.53" x="250" y="0"><tspan x="250" dy="17">4</tspan><tspan x="250" dy="17">=</tspan><tspan x="250" dy="17">9</tspan><tspan x="250" dy="17">5</tspan><tspan x="250" dy="17">#</tspan><tspan x="250" dy="17">=</tspan><tspan x="250" dy="17">6</tspan><tspan x="250" dy="17">5</tspan><tspan x="250" dy="17">A</tspan><tspan x="250" dy="17">*</tspan><tspan x="250" dy="17">C</tspan><tspan x="250" dy="17">9</tspan><tspan x="250" dy="17">$</tspan><tspan x="250" dy="17">2</tspan><tspan x="250" dy="17">3</tspan><tspan x="250" dy="17">E</tspan><tspan x="250" dy="17">{</tspan><tspan x="250" dy="17">6</tspan><tspan x="250" dy="17">#</tspan></text>
+<text class="rain" style="animation-duration:5.31s;animation-delay:-3.89s" opacity="0.37" x="272" y="0"><tspan x="272" dy="17">C</tspan><tspan x="272" dy="17">{</tspan><tspan x="272" dy="17">E</tspan><tspan x="272" dy="17">1</tspan><tspan x="272" dy="17">5</tspan><tspan x="272" dy="17">*</tspan><tspan x="272" dy="17">=</tspan><tspan x="272" dy="17">8</tspan><tspan x="272" dy="17">1</tspan><tspan x="272" dy="17">#</tspan><tspan x="272" dy="17">3</tspan><tspan x="272" dy="17">6</tspan><tspan x="272" dy="17">3</tspan><tspan x="272" dy="17">3</tspan><tspan x="272" dy="17">}</tspan><tspan x="272" dy="17">}</tspan><tspan x="272" dy="17">]</tspan><tspan x="272" dy="17">8</tspan></text>
+<text class="rain" style="animation-duration:8.73s;animation-delay:-1.13s" opacity="0.6" x="294" y="0"><tspan x="294" dy="17">0</tspan><tspan x="294" dy="17">6</tspan><tspan x="294" dy="17">#</tspan><tspan x="294" dy="17">[</tspan><tspan x="294" dy="17">2</tspan><tspan x="294" dy="17">[</tspan><tspan x="294" dy="17">=</tspan><tspan x="294" dy="17">5</tspan><tspan x="294" dy="17">6</tspan><tspan x="294" dy="17">[</tspan><tspan x="294" dy="17">0</tspan><tspan x="294" dy="17">1</tspan><tspan x="294" dy="17">6</tspan><tspan x="294" dy="17">8</tspan><tspan x="294" dy="17">4</tspan><tspan x="294" dy="17">8</tspan><tspan x="294" dy="17">#</tspan><tspan x="294" dy="17">9</tspan></text>
+<text class="rain" style="animation-duration:5.34s;animation-delay:-1.58s" opacity="0.36" x="316" y="0"><tspan x="316" dy="17">+</tspan><tspan x="316" dy="17">4</tspan><tspan x="316" dy="17">A</tspan><tspan x="316" dy="17">5</tspan><tspan x="316" dy="17">+</tspan><tspan x="316" dy="17">+</tspan><tspan x="316" dy="17">4</tspan><tspan x="316" dy="17">1</tspan><tspan x="316" dy="17">+</tspan><tspan x="316" dy="17">/</tspan><tspan x="316" dy="17">3</tspan><tspan x="316" dy="17">1</tspan><tspan x="316" dy="17">A</tspan><tspan x="316" dy="17">]</tspan><tspan x="316" dy="17">$</tspan><tspan x="316" dy="17">]</tspan><tspan x="316" dy="17">*</tspan><tspan x="316" dy="17">}</tspan><tspan x="316" dy="17">C</tspan><tspan x="316" dy="17">6</tspan></text>
+<text class="rain" style="animation-duration:8.74s;animation-delay:-1.05s" opacity="0.52" x="338" y="0"><tspan x="338" dy="17">%</tspan><tspan x="338" dy="17">%</tspan><tspan x="338" dy="17">F</tspan><tspan x="338" dy="17">4</tspan><tspan x="338" dy="17">/</tspan><tspan x="338" dy="17">$</tspan><tspan x="338" dy="17">6</tspan><tspan x="338" dy="17">{</tspan><tspan x="338" dy="17">{</tspan><tspan x="338" dy="17">0</tspan><tspan x="338" dy="17">E</tspan><tspan x="338" dy="17">#</tspan><tspan x="338" dy="17">E</tspan><tspan x="338" dy="17">3</tspan><tspan x="338" dy="17">F</tspan></text>
+<text class="rain" style="animation-duration:5.78s;animation-delay:-0.91s" opacity="0.42" x="360" y="0"><tspan x="360" dy="17">B</tspan><tspan x="360" dy="17">8</tspan><tspan x="360" dy="17">3</tspan><tspan x="360" dy="17">3</tspan><tspan x="360" dy="17">]</tspan><tspan x="360" dy="17">0</tspan><tspan x="360" dy="17">A</tspan><tspan x="360" dy="17">F</tspan><tspan x="360" dy="17">@</tspan><tspan x="360" dy="17">}</tspan><tspan x="360" dy="17">7</tspan><tspan x="360" dy="17">0</tspan><tspan x="360" dy="17">/</tspan><tspan x="360" dy="17">3</tspan></text>
+<text class="rain" style="animation-duration:9.61s;animation-delay:-9.49s" opacity="0.38" x="382" y="0"><tspan x="382" dy="17">0</tspan><tspan x="382" dy="17">@</tspan><tspan x="382" dy="17">D</tspan><tspan x="382" dy="17">1</tspan><tspan x="382" dy="17">%</tspan><tspan x="382" dy="17">*</tspan><tspan x="382" dy="17">A</tspan><tspan x="382" dy="17">[</tspan><tspan x="382" dy="17">8</tspan><tspan x="382" dy="17">7</tspan></text>
+<text class="rain" style="animation-duration:5.86s;animation-delay:-2.58s" opacity="0.59" x="404" y="0"><tspan x="404" dy="17">0</tspan><tspan x="404" dy="17">7</tspan><tspan x="404" dy="17">#</tspan><tspan x="404" dy="17">E</tspan><tspan x="404" dy="17">4</tspan><tspan x="404" dy="17">9</tspan><tspan x="404" dy="17">$</tspan><tspan x="404" dy="17">0</tspan><tspan x="404" dy="17">@</tspan><tspan x="404" dy="17">2</tspan><tspan x="404" dy="17">6</tspan><tspan x="404" dy="17">7</tspan><tspan x="404" dy="17">2</tspan><tspan x="404" dy="17">%</tspan><tspan x="404" dy="17">/</tspan><tspan x="404" dy="17">[</tspan><tspan x="404" dy="17">5</tspan><tspan x="404" dy="17">4</tspan><tspan x="404" dy="17">1</tspan></text>
+<text class="rain" style="animation-duration:9.44s;animation-delay:-6.25s" opacity="0.34" x="426" y="0"><tspan x="426" dy="17">{</tspan><tspan x="426" dy="17">$</tspan><tspan x="426" dy="17">7</tspan><tspan x="426" dy="17">0</tspan><tspan x="426" dy="17">=</tspan><tspan x="426" dy="17">8</tspan><tspan x="426" dy="17">D</tspan><tspan x="426" dy="17">*</tspan><tspan x="426" dy="17">2</tspan><tspan x="426" dy="17">5</tspan><tspan x="426" dy="17">C</tspan><tspan x="426" dy="17">C</tspan><tspan x="426" dy="17">1</tspan><tspan x="426" dy="17">]</tspan><tspan x="426" dy="17">*</tspan><tspan x="426" dy="17">@</tspan><tspan x="426" dy="17">%</tspan><tspan x="426" dy="17">2</tspan><tspan x="426" dy="17">5</tspan><tspan x="426" dy="17">9</tspan><tspan x="426" dy="17">#</tspan><tspan x="426" dy="17">E</tspan></text>
+<text class="rain" style="animation-duration:7.21s;animation-delay:-0.47s" opacity="0.34" x="448" y="0"><tspan x="448" dy="17">{</tspan><tspan x="448" dy="17">2</tspan><tspan x="448" dy="17">}</tspan><tspan x="448" dy="17">=</tspan><tspan x="448" dy="17">[</tspan><tspan x="448" dy="17">2</tspan><tspan x="448" dy="17">1</tspan><tspan x="448" dy="17">F</tspan><tspan x="448" dy="17">8</tspan><tspan x="448" dy="17">/</tspan><tspan x="448" dy="17">{</tspan><tspan x="448" dy="17">}</tspan></text>
+<text class="rain" style="animation-duration:10.8s;animation-delay:-7.9s" opacity="0.43" x="470" y="0"><tspan x="470" dy="17">@</tspan><tspan x="470" dy="17">/</tspan><tspan x="470" dy="17">$</tspan><tspan x="470" dy="17">/</tspan><tspan x="470" dy="17">0</tspan><tspan x="470" dy="17">$</tspan><tspan x="470" dy="17">{</tspan><tspan x="470" dy="17">0</tspan><tspan x="470" dy="17">3</tspan><tspan x="470" dy="17">2</tspan><tspan x="470" dy="17">[</tspan><tspan x="470" dy="17">9</tspan><tspan x="470" dy="17">0</tspan><tspan x="470" dy="17">1</tspan></text>
+<text class="rain" style="animation-duration:10.76s;animation-delay:-2.51s" opacity="0.64" x="492" y="0"><tspan x="492" dy="17">B</tspan><tspan x="492" dy="17">A</tspan><tspan x="492" dy="17">E</tspan><tspan x="492" dy="17">}</tspan><tspan x="492" dy="17">*</tspan><tspan x="492" dy="17">1</tspan><tspan x="492" dy="17">0</tspan><tspan x="492" dy="17">0</tspan><tspan x="492" dy="17">E</tspan><tspan x="492" dy="17">F</tspan><tspan x="492" dy="17">$</tspan><tspan x="492" dy="17">]</tspan><tspan x="492" dy="17">4</tspan><tspan x="492" dy="17">5</tspan><tspan x="492" dy="17">/</tspan><tspan x="492" dy="17">A</tspan></text>
+<text class="rain" style="animation-duration:10.27s;animation-delay:-5.79s" opacity="0.62" x="514" y="0"><tspan x="514" dy="17">D</tspan><tspan x="514" dy="17">1</tspan><tspan x="514" dy="17">7</tspan><tspan x="514" dy="17">7</tspan><tspan x="514" dy="17">6</tspan><tspan x="514" dy="17">C</tspan><tspan x="514" dy="17">[</tspan><tspan x="514" dy="17">]</tspan><tspan x="514" dy="17">*</tspan><tspan x="514" dy="17">/</tspan><tspan x="514" dy="17">7</tspan><tspan x="514" dy="17">0</tspan><tspan x="514" dy="17">E</tspan><tspan x="514" dy="17">A</tspan><tspan x="514" dy="17">+</tspan><tspan x="514" dy="17">E</tspan><tspan x="514" dy="17">]</tspan></text>
+<text class="rain" style="animation-duration:6.53s;animation-delay:-2.55s" opacity="0.33" x="536" y="0"><tspan x="536" dy="17">%</tspan><tspan x="536" dy="17">0</tspan><tspan x="536" dy="17">=</tspan><tspan x="536" dy="17">D</tspan><tspan x="536" dy="17">+</tspan><tspan x="536" dy="17">A</tspan><tspan x="536" dy="17">=</tspan><tspan x="536" dy="17">[</tspan><tspan x="536" dy="17">{</tspan><tspan x="536" dy="17">/</tspan><tspan x="536" dy="17">+</tspan></text>
+<text class="rain" style="animation-duration:8.04s;animation-delay:-0.85s" opacity="0.39" x="558" y="0"><tspan x="558" dy="17">5</tspan><tspan x="558" dy="17">[</tspan><tspan x="558" dy="17">*</tspan><tspan x="558" dy="17">B</tspan><tspan x="558" dy="17">D</tspan><tspan x="558" dy="17">[</tspan><tspan x="558" dy="17">F</tspan><tspan x="558" dy="17">3</tspan><tspan x="558" dy="17">*</tspan><tspan x="558" dy="17">1</tspan><tspan x="558" dy="17">E</tspan></text>
+<text class="rain" style="animation-duration:5.5s;animation-delay:-2.14s" opacity="0.59" x="580" y="0"><tspan x="580" dy="17">6</tspan><tspan x="580" dy="17">E</tspan><tspan x="580" dy="17">$</tspan><tspan x="580" dy="17">/</tspan><tspan x="580" dy="17">7</tspan><tspan x="580" dy="17">@</tspan><tspan x="580" dy="17">1</tspan><tspan x="580" dy="17">$</tspan><tspan x="580" dy="17">4</tspan><tspan x="580" dy="17">[</tspan><tspan x="580" dy="17">$</tspan><tspan x="580" dy="17">5</tspan><tspan x="580" dy="17">{</tspan><tspan x="580" dy="17">4</tspan><tspan x="580" dy="17">+</tspan><tspan x="580" dy="17">F</tspan><tspan x="580" dy="17">%</tspan><tspan x="580" dy="17">0</tspan><tspan x="580" dy="17">{</tspan><tspan x="580" dy="17">F</tspan><tspan x="580" dy="17">}</tspan><tspan x="580" dy="17">2</tspan></text>
+<text class="rain" style="animation-duration:9.34s;animation-delay:-6.95s" opacity="0.44" x="602" y="0"><tspan x="602" dy="17">1</tspan><tspan x="602" dy="17">}</tspan><tspan x="602" dy="17">F</tspan><tspan x="602" dy="17">8</tspan><tspan x="602" dy="17">{</tspan><tspan x="602" dy="17">4</tspan><tspan x="602" dy="17">*</tspan><tspan x="602" dy="17">9</tspan><tspan x="602" dy="17">1</tspan><tspan x="602" dy="17">#</tspan><tspan x="602" dy="17">{</tspan><tspan x="602" dy="17">%</tspan><tspan x="602" dy="17">E</tspan><tspan x="602" dy="17">$</tspan><tspan x="602" dy="17">D</tspan><tspan x="602" dy="17">#</tspan><tspan x="602" dy="17">6</tspan><tspan x="602" dy="17">7</tspan><tspan x="602" dy="17">%</tspan><tspan x="602" dy="17">=</tspan><tspan x="602" dy="17">E</tspan><tspan x="602" dy="17">B</tspan></text>
+<text class="rain" style="animation-duration:5.68s;animation-delay:-4.95s" opacity="0.29" x="624" y="0"><tspan x="624" dy="17">6</tspan><tspan x="624" dy="17">{</tspan><tspan x="624" dy="17">*</tspan><tspan x="624" dy="17">+</tspan><tspan x="624" dy="17">E</tspan><tspan x="624" dy="17">$</tspan><tspan x="624" dy="17">}</tspan><tspan x="624" dy="17">C</tspan><tspan x="624" dy="17">3</tspan><tspan x="624" dy="17">2</tspan><tspan x="624" dy="17">0</tspan><tspan x="624" dy="17">5</tspan><tspan x="624" dy="17">E</tspan><tspan x="624" dy="17">#</tspan></text>
+<text class="rain" style="animation-duration:7.43s;animation-delay:-4.73s" opacity="0.31" x="646" y="0"><tspan x="646" dy="17">%</tspan><tspan x="646" dy="17">}</tspan><tspan x="646" dy="17">D</tspan><tspan x="646" dy="17">4</tspan><tspan x="646" dy="17">A</tspan><tspan x="646" dy="17">@</tspan><tspan x="646" dy="17">C</tspan><tspan x="646" dy="17">A</tspan><tspan x="646" dy="17">0</tspan><tspan x="646" dy="17">F</tspan><tspan x="646" dy="17">[</tspan><tspan x="646" dy="17">A</tspan><tspan x="646" dy="17">A</tspan><tspan x="646" dy="17">4</tspan><tspan x="646" dy="17">1</tspan><tspan x="646" dy="17">/</tspan></text>
+<text class="rain" style="animation-duration:7.43s;animation-delay:-5.09s" opacity="0.27" x="668" y="0"><tspan x="668" dy="17">]</tspan><tspan x="668" dy="17">}</tspan><tspan x="668" dy="17">}</tspan><tspan x="668" dy="17">5</tspan><tspan x="668" dy="17">$</tspan><tspan x="668" dy="17">4</tspan><tspan x="668" dy="17">*</tspan><tspan x="668" dy="17">D</tspan><tspan x="668" dy="17">5</tspan><tspan x="668" dy="17">@</tspan><tspan x="668" dy="17">9</tspan><tspan x="668" dy="17">0</tspan></text>
+<text class="rain" style="animation-duration:10.97s;animation-delay:-9.72s" opacity="0.65" x="690" y="0"><tspan x="690" dy="17">}</tspan><tspan x="690" dy="17">@</tspan><tspan x="690" dy="17">8</tspan><tspan x="690" dy="17">]</tspan><tspan x="690" dy="17">*</tspan><tspan x="690" dy="17">5</tspan><tspan x="690" dy="17">E</tspan><tspan x="690" dy="17">9</tspan><tspan x="690" dy="17">{</tspan><tspan x="690" dy="17">0</tspan><tspan x="690" dy="17">F</tspan><tspan x="690" dy="17">9</tspan><tspan x="690" dy="17">*</tspan><tspan x="690" dy="17">3</tspan><tspan x="690" dy="17">@</tspan><tspan x="690" dy="17">/</tspan></text>
+<text class="rain" style="animation-duration:5.52s;animation-delay:-5.25s" opacity="0.46" x="712" y="0"><tspan x="712" dy="17">/</tspan><tspan x="712" dy="17">1</tspan><tspan x="712" dy="17">%</tspan><tspan x="712" dy="17">D</tspan><tspan x="712" dy="17">1</tspan><tspan x="712" dy="17">@</tspan><tspan x="712" dy="17">5</tspan><tspan x="712" dy="17">+</tspan><tspan x="712" dy="17">1</tspan><tspan x="712" dy="17">$</tspan><tspan x="712" dy="17">}</tspan><tspan x="712" dy="17">8</tspan><tspan x="712" dy="17">}</tspan><tspan x="712" dy="17">*</tspan><tspan x="712" dy="17">8</tspan></text>
+<text class="rain" style="animation-duration:7.59s;animation-delay:-4.71s" opacity="0.27" x="734" y="0"><tspan x="734" dy="17">%</tspan><tspan x="734" dy="17">5</tspan><tspan x="734" dy="17">A</tspan><tspan x="734" dy="17">E</tspan><tspan x="734" dy="17">[</tspan><tspan x="734" dy="17">}</tspan><tspan x="734" dy="17">#</tspan><tspan x="734" dy="17">C</tspan><tspan x="734" dy="17">0</tspan><tspan x="734" dy="17">F</tspan><tspan x="734" dy="17">*</tspan><tspan x="734" dy="17">1</tspan><tspan x="734" dy="17">@</tspan><tspan x="734" dy="17">%</tspan><tspan x="734" dy="17">6</tspan><tspan x="734" dy="17">7</tspan><tspan x="734" dy="17">%</tspan></text>
+<text class="rain" style="animation-duration:5.11s;animation-delay:-4.98s" opacity="0.36" x="756" y="0"><tspan x="756" dy="17">=</tspan><tspan x="756" dy="17">9</tspan><tspan x="756" dy="17">+</tspan><tspan x="756" dy="17">%</tspan><tspan x="756" dy="17">1</tspan><tspan x="756" dy="17">=</tspan><tspan x="756" dy="17">2</tspan><tspan x="756" dy="17">=</tspan><tspan x="756" dy="17">1</tspan><tspan x="756" dy="17">D</tspan><tspan x="756" dy="17">7</tspan><tspan x="756" dy="17">/</tspan><tspan x="756" dy="17">]</tspan><tspan x="756" dy="17">@</tspan><tspan x="756" dy="17">1</tspan><tspan x="756" dy="17">=</tspan><tspan x="756" dy="17">$</tspan><tspan x="756" dy="17">0</tspan><tspan x="756" dy="17">B</tspan><tspan x="756" dy="17">0</tspan></text>
+<text class="rain" style="animation-duration:5.33s;animation-delay:-4.24s" opacity="0.25" x="778" y="0"><tspan x="778" dy="17">[</tspan><tspan x="778" dy="17">1</tspan><tspan x="778" dy="17">A</tspan><tspan x="778" dy="17">F</tspan><tspan x="778" dy="17">]</tspan><tspan x="778" dy="17">$</tspan><tspan x="778" dy="17">0</tspan><tspan x="778" dy="17">4</tspan><tspan x="778" dy="17">{</tspan><tspan x="778" dy="17">$</tspan><tspan x="778" dy="17">/</tspan><tspan x="778" dy="17">+</tspan><tspan x="778" dy="17">B</tspan><tspan x="778" dy="17">6</tspan><tspan x="778" dy="17">1</tspan><tspan x="778" dy="17">2</tspan><tspan x="778" dy="17">0</tspan><tspan x="778" dy="17">A</tspan><tspan x="778" dy="17">1</tspan><tspan x="778" dy="17">#</tspan></text>
+<text class="rain" style="animation-duration:6.83s;animation-delay:-1.87s" opacity="0.3" x="800" y="0"><tspan x="800" dy="17">8</tspan><tspan x="800" dy="17">2</tspan><tspan x="800" dy="17">A</tspan><tspan x="800" dy="17">%</tspan><tspan x="800" dy="17">1</tspan><tspan x="800" dy="17">D</tspan><tspan x="800" dy="17">]</tspan><tspan x="800" dy="17">6</tspan><tspan x="800" dy="17">6</tspan><tspan x="800" dy="17">0</tspan><tspan x="800" dy="17">7</tspan><tspan x="800" dy="17">A</tspan><tspan x="800" dy="17">D</tspan><tspan x="800" dy="17">A</tspan><tspan x="800" dy="17">#</tspan><tspan x="800" dy="17">0</tspan><tspan x="800" dy="17">4</tspan><tspan x="800" dy="17">8</tspan><tspan x="800" dy="17">5</tspan></text>
+<text class="rain" style="animation-duration:7.94s;animation-delay:-1.2s" opacity="0.55" x="822" y="0"><tspan x="822" dy="17">C</tspan><tspan x="822" dy="17">}</tspan><tspan x="822" dy="17">5</tspan><tspan x="822" dy="17">$</tspan><tspan x="822" dy="17">4</tspan><tspan x="822" dy="17">*</tspan><tspan x="822" dy="17">8</tspan><tspan x="822" dy="17">0</tspan><tspan x="822" dy="17">4</tspan><tspan x="822" dy="17">[</tspan><tspan x="822" dy="17">3</tspan><tspan x="822" dy="17">A</tspan><tspan x="822" dy="17">[</tspan><tspan x="822" dy="17">#</tspan><tspan x="822" dy="17">$</tspan></text>
+<text class="rain" style="animation-duration:5.98s;animation-delay:-2.94s" opacity="0.48" x="844" y="0"><tspan x="844" dy="17">/</tspan><tspan x="844" dy="17">8</tspan><tspan x="844" dy="17">2</tspan><tspan x="844" dy="17">E</tspan><tspan x="844" dy="17">1</tspan><tspan x="844" dy="17">8</tspan><tspan x="844" dy="17">A</tspan><tspan x="844" dy="17">%</tspan><tspan x="844" dy="17">0</tspan><tspan x="844" dy="17">0</tspan></text>
+<text class="rain" style="animation-duration:10.54s;animation-delay:-3.31s" opacity="0.55" x="866" y="0"><tspan x="866" dy="17">7</tspan><tspan x="866" dy="17">D</tspan><tspan x="866" dy="17">D</tspan><tspan x="866" dy="17">7</tspan><tspan x="866" dy="17">6</tspan><tspan x="866" dy="17">6</tspan><tspan x="866" dy="17">{</tspan><tspan x="866" dy="17">E</tspan><tspan x="866" dy="17">[</tspan><tspan x="866" dy="17">2</tspan><tspan x="866" dy="17">A</tspan><tspan x="866" dy="17">3</tspan><tspan x="866" dy="17">7</tspan><tspan x="866" dy="17">{</tspan></text>
+<text class="rain" style="animation-duration:8.71s;animation-delay:-7.41s" opacity="0.4" x="888" y="0"><tspan x="888" dy="17">{</tspan><tspan x="888" dy="17">{</tspan><tspan x="888" dy="17">%</tspan><tspan x="888" dy="17">4</tspan><tspan x="888" dy="17">0</tspan><tspan x="888" dy="17">#</tspan><tspan x="888" dy="17">+</tspan><tspan x="888" dy="17">B</tspan><tspan x="888" dy="17">{</tspan><tspan x="888" dy="17">1</tspan><tspan x="888" dy="17">2</tspan><tspan x="888" dy="17">=</tspan><tspan x="888" dy="17">7</tspan><tspan x="888" dy="17">E</tspan><tspan x="888" dy="17">%</tspan></text>
+<text class="rain" style="animation-duration:8.85s;animation-delay:-3.13s" opacity="0.46" x="910" y="0"><tspan x="910" dy="17">1</tspan><tspan x="910" dy="17">1</tspan><tspan x="910" dy="17">*</tspan><tspan x="910" dy="17">]</tspan><tspan x="910" dy="17">D</tspan><tspan x="910" dy="17">#</tspan><tspan x="910" dy="17">7</tspan><tspan x="910" dy="17">#</tspan><tspan x="910" dy="17">2</tspan><tspan x="910" dy="17">A</tspan><tspan x="910" dy="17">A</tspan><tspan x="910" dy="17">6</tspan></text>
+<text class="rain" style="animation-duration:9.49s;animation-delay:-8.11s" opacity="0.28" x="932" y="0"><tspan x="932" dy="17">D</tspan><tspan x="932" dy="17">=</tspan><tspan x="932" dy="17">E</tspan><tspan x="932" dy="17">D</tspan><tspan x="932" dy="17">]</tspan><tspan x="932" dy="17">1</tspan><tspan x="932" dy="17">{</tspan><tspan x="932" dy="17">]</tspan><tspan x="932" dy="17">A</tspan><tspan x="932" dy="17">/</tspan><tspan x="932" dy="17">*</tspan><tspan x="932" dy="17">7</tspan><tspan x="932" dy="17">1</tspan><tspan x="932" dy="17">2</tspan><tspan x="932" dy="17">$</tspan><tspan x="932" dy="17">C</tspan><tspan x="932" dy="17">[</tspan><tspan x="932" dy="17">1</tspan><tspan x="932" dy="17">@</tspan><tspan x="932" dy="17">#</tspan><tspan x="932" dy="17">[</tspan><tspan x="932" dy="17">4</tspan></text>
+<text class="rain" style="animation-duration:6.08s;animation-delay:-3.68s" opacity="0.31" x="954" y="0"><tspan x="954" dy="17">B</tspan><tspan x="954" dy="17">E</tspan><tspan x="954" dy="17">0</tspan><tspan x="954" dy="17">1</tspan><tspan x="954" dy="17">*</tspan><tspan x="954" dy="17">+</tspan><tspan x="954" dy="17">4</tspan><tspan x="954" dy="17">+</tspan><tspan x="954" dy="17">4</tspan><tspan x="954" dy="17">$</tspan><tspan x="954" dy="17">C</tspan><tspan x="954" dy="17">E</tspan><tspan x="954" dy="17">A</tspan><tspan x="954" dy="17">2</tspan><tspan x="954" dy="17">0</tspan><tspan x="954" dy="17">A</tspan><tspan x="954" dy="17">=</tspan><tspan x="954" dy="17">1</tspan><tspan x="954" dy="17">]</tspan><tspan x="954" dy="17">+</tspan><tspan x="954" dy="17">B</tspan></text>
+<text class="rain" style="animation-duration:6.49s;animation-delay:-0.96s" opacity="0.61" x="976" y="0"><tspan x="976" dy="17">3</tspan><tspan x="976" dy="17">}</tspan><tspan x="976" dy="17">C</tspan><tspan x="976" dy="17">0</tspan><tspan x="976" dy="17">5</tspan><tspan x="976" dy="17">0</tspan><tspan x="976" dy="17">1</tspan><tspan x="976" dy="17">5</tspan><tspan x="976" dy="17">F</tspan><tspan x="976" dy="17">F</tspan><tspan x="976" dy="17">D</tspan><tspan x="976" dy="17">6</tspan><tspan x="976" dy="17">9</tspan><tspan x="976" dy="17">D</tspan><tspan x="976" dy="17">5</tspan><tspan x="976" dy="17">1</tspan><tspan x="976" dy="17">E</tspan><tspan x="976" dy="17">1</tspan></text>
+<text class="rain" style="animation-duration:5.25s;animation-delay:-0.69s" opacity="0.29" x="998" y="0"><tspan x="998" dy="17">]</tspan><tspan x="998" dy="17">@</tspan><tspan x="998" dy="17">4</tspan><tspan x="998" dy="17">1</tspan><tspan x="998" dy="17">%</tspan><tspan x="998" dy="17">4</tspan><tspan x="998" dy="17">C</tspan><tspan x="998" dy="17">}</tspan><tspan x="998" dy="17">C</tspan><tspan x="998" dy="17">A</tspan><tspan x="998" dy="17">8</tspan><tspan x="998" dy="17">}</tspan><tspan x="998" dy="17">0</tspan><tspan x="998" dy="17">2</tspan></text></g>
+<rect width="1000" height="340" fill="url(#fade)"/>
+<rect class="sweep" y="0" width="1000" height="40" fill="#00ff41" opacity=".05"/>
+<rect x="215" y="78" width="570" height="190" rx="6" fill="#000" fill-opacity=".82" stroke="#00ff41" stroke-opacity=".6"/>
+<g stroke="#00ff41" stroke-width="3" fill="none"><path d="M205 98 V68 H235"/><path d="M765 68 H795 V98"/><path d="M205 248 V278 H235"/><path d="M765 278 H795 V248"/></g>
+<text x="235" y="104" font-size="14" fill="#00ff41" opacity=".75">root@alexvu:~# ./identify --target=self</text>
+<g text-anchor="middle" font-size="82" font-weight="700" letter-spacing="10">
+<text class="gA" x="500" y="190" fill="#ff0040">ALEX VU</text>
+<text class="gB" x="500" y="190" fill="#00e5ff">ALEX VU</text>
+<text class="flick" x="500" y="190" fill="#00ff41" filter="url(#glow)">ALEX VU</text>
 </g>
-
-<!-- sun -->
-<circle class="sunPulse" cx="500" cy="170" r="95" fill="#ff4f9a" filter="url(#sunGlow)"/>
-<circle cx="500" cy="170" r="88" fill="url(#sun)" mask="url(#sunStripes)"/>
-
-<!-- mountains -->
-<path d="M0 240 L70 190 L130 215 L210 150 L290 205 L350 180 L420 240Z" fill="#14042b" stroke="#00f0ff" stroke-width="1.5" stroke-opacity=".7"/>
-<path d="M580 240 L650 185 L720 210 L800 140 L880 200 L940 175 L1000 205 L1000 240Z" fill="#14042b" stroke="#00f0ff" stroke-width="1.5" stroke-opacity=".7"/>
-
-<!-- ground + grid -->
-<path d="M0 240 H1000 V346 Q1000 360 986 360 H14 Q0 360 0 346Z" fill="url(#ground)"/>
-<line x1="0" y1="240" x2="1000" y2="240" stroke="#ff4fd8" stroke-width="2" filter="url(#glow)"/>
-<g clip-path="url(#groundClip)" stroke="#ff4fd8" stroke-opacity=".75" stroke-width="1.3">
-  <line x1="500" y1="240" x2="500" y2="360"/>
-  <line x1="500" y1="240" x2="380" y2="360"/><line x1="500" y1="240" x2="620" y2="360"/>
-  <line x1="500" y1="240" x2="250" y2="360"/><line x1="500" y1="240" x2="750" y2="360"/>
-  <line x1="500" y1="240" x2="110" y2="360"/><line x1="500" y1="240" x2="890" y2="360"/>
-  <line x1="500" y1="240" x2="-40" y2="360"/><line x1="500" y1="240" x2="1040" y2="360"/>
-  <line x1="500" y1="240" x2="-220" y2="360"/><line x1="500" y1="240" x2="1220" y2="360"/>
-  <line x1="500" y1="240" x2="-450" y2="360"/><line x1="500" y1="240" x2="1450" y2="360"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240" style="animation-delay:-.4s"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240" style="animation-delay:-.8s"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240" style="animation-delay:-1.2s"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240" style="animation-delay:-1.6s"/>
-  <line class="hl" x1="0" y1="240" x2="1000" y2="240" style="animation-delay:-2s"/>
+<text x="500" y="226" text-anchor="middle" font-size="17" fill="#c8ffd4" letter-spacing="2">web developer // php · laravel · javascript</text>
+<text x="235" y="254" font-size="14" fill="#00ff41"><tspan opacity=".75">[ ACCESS GRANTED ] root@alexvu:~# </tspan><tspan class="cur">█</tspan></text>
+<rect width="1000" height="340" fill="url(#scan)"/>
+<rect width="1000" height="340" fill="url(#vig)"/>
 </g>
-
-<!-- title -->
-<g text-anchor="middle" font-size="104" font-weight="900" font-style="italic" letter-spacing="4">
-  <text class="glitchA" x="500" y="140" fill="#00f0ff">ALEX VU</text>
-  <text class="glitchB" x="500" y="140" fill="#ff2e88">ALEX VU</text>
-  <text x="500" y="140" fill="url(#title)" stroke="#2b0b5a" stroke-width="2" filter="url(#glow)">ALEX VU</text>
-</g>
-
-<!-- rotating role -->
-<g text-anchor="middle" class="mono" font-size="20" font-weight="700" letter-spacing="3">
-  <rect x="300" y="276" width="400" height="40" rx="20" fill="#07010f" fill-opacity=".75" stroke="#00f0ff" stroke-opacity=".8"/>
-  <text class="role mono" x="500" y="303" fill="#00f0ff">&gt; WEB DEVELOPER</text>
-  <text class="role mono" x="500" y="303" fill="#ff4fd8" style="animation-delay:-6s">&gt; PHP · LARAVEL · JS</text>
-  <text class="role mono" x="500" y="303" fill="#fff35c" style="animation-delay:-3s">&gt; CODE · SHIP · REPEAT</text>
-</g>
+<rect x=".5" y=".5" width="999" height="339" rx="12" fill="none" stroke="#00ff41" stroke-opacity=".5"/>
 </svg>
