@@ -39,6 +39,17 @@
     <td align="center"><img src="https://img.shields.io/badge/TOOLS-c8102e?style=for-the-badge&labelColor=0a0a0c" /></td>
     <td><img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,postman,npm,figma,notion&perline=8" /></td>
   </tr>
+  <tr>
+    <td align="center"><img src="https://img.shields.io/badge/AI_AGENTS-c9d1d9?style=for-the-badge&labelColor=0a0a0c" /></td>
+    <td>
+      <img src="https://img.shields.io/badge/Claude-d97757?style=for-the-badge&logo=claude&logoColor=white" />
+      <img src="https://img.shields.io/badge/ChatGPT-10a37f?style=for-the-badge&logo=openai&logoColor=white" />
+      <img src="https://img.shields.io/badge/Gemini-4285f4?style=for-the-badge&logo=googlegemini&logoColor=white" />
+      <img src="https://img.shields.io/badge/Cursor-111318?style=for-the-badge&logo=cursor&logoColor=white" />
+      <img src="https://img.shields.io/badge/Copilot-111318?style=for-the-badge&logo=githubcopilot&logoColor=white" />
+      <img src="https://img.shields.io/badge/Perplexity-1f8a8a?style=for-the-badge&logo=perplexity&logoColor=white" />
+    </td>
+  </tr>
 </table>
 
 </div>
